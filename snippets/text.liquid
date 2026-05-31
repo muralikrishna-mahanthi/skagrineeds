@@ -74,11 +74,17 @@
       --font-family: {{ block_settings.custom_font_family }};
       --font-size: {{ block_settings.custom_font_size }}px;
       --font-weight: {{ block_settings.custom_font_weight }};
+      font-family: {{ block_settings.custom_font_family }};
+      font-size: {{ block_settings.custom_font_size }}px;
+      font-weight: {{ block_settings.custom_font_weight }};
       {% if block_settings.custom_font_color != blank %}
         --color: {{ block_settings.custom_font_color }};
+        color: {{ block_settings.custom_font_color }};
       {% endif %}
       --letter-spacing: {{ block_settings.custom_letter_spacing }}px;
       --word-spacing: {{ block_settings.custom_word_spacing }}px;
+      letter-spacing: {{ block_settings.custom_letter_spacing }}px;
+      word-spacing: {{ block_settings.custom_word_spacing }}px;
     {% endif %}
   "
 

@@ -4224,3 +4224,8 @@ product-recommendations:has([data-has-recommendations='false']) {
   letter-spacing: var(--letter-spacing) !important;
   word-spacing: var(--word-spacing) !important;
 }
+
+.custom-typography-override * {
+  font-family: inherit !important;
+  font-weight: inherit !important;
+}
