@@ -56,7 +56,7 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<p>Advanced Nutrition</p>",
+                "text": "<p>ADVANCED NUTRITION</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -89,7 +89,7 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<p>Maximum Yield</p>",
+                "text": "<p>MAXIMUM YIELD</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
