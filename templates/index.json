@@ -56,7 +56,7 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<p>ADVANCED NUTRITION</p>",
+                "text": "<p>Advanced Crop</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -76,7 +76,7 @@
                 "padding-inline-start": 0,
                 "padding-inline-end": 0,
                 "use_custom_typography": true,
-                "custom_font_family": "'Open Sans', sans-serif",
+                "custom_font_family": "Inter",
                 "custom_font_size": 52,
                 "custom_font_weight": "800",
                 "custom_font_color": "#03900a",
