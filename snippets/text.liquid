@@ -46,6 +46,9 @@
     if is_rte
       echo ' rte '
     endif
+    if block_settings.use_custom_typography
+      echo ' custom-typography-override '
+    endif
   endcapture
 %}
 
@@ -66,6 +69,16 @@
       --text-background-color: {{ block_settings.background_color | default: 'rgb(255 255 255 / 1.0)' }};
       --text-corner-radius: {{ block_settings.corner_radius }}px;
       --text-padding: max(var(--padding-2xs), calc((var(--text-corner-radius) + var(--padding-xs)) * (1 - cos(45deg))));
+    {% endif %}
+    {% if block_settings.use_custom_typography %}
+      --font-family: {{ block_settings.custom_font_family }};
+      --font-size: {{ block_settings.custom_font_size }}px;
+      --font-weight: {{ block_settings.custom_font_weight }};
+      {% if block_settings.custom_font_color != blank %}
+        --color: {{ block_settings.custom_font_color }};
+      {% endif %}
+      --letter-spacing: {{ block_settings.custom_letter_spacing }}px;
+      --word-spacing: {{ block_settings.custom_word_spacing }}px;
     {% endif %}
   "
 

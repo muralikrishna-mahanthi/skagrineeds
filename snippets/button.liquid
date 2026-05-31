@@ -21,8 +21,22 @@
     size-style
     {{ block_settings.style_class }}
     {{ block_settings.style_class }}--{{ block.id }}
+    {% if block_settings.use_custom_typography %} custom-typography-override{% endif %}
   "
-  style="{% render 'size-style', settings: block_settings %}"
+  style="
+    {% render 'size-style', settings: block_settings %}
+    {% if block_settings.use_custom_typography %}
+      --font-family: {{ block_settings.custom_font_family }};
+      --font-size: {{ block_settings.custom_font_size }}px;
+      --font-weight: {{ block_settings.custom_font_weight }};
+      {% if block_settings.custom_font_color != blank %}
+        --color: {{ block_settings.custom_font_color }};
+        color: {{ block_settings.custom_font_color }} !important;
+      {% endif %}
+      --letter-spacing: {{ block_settings.custom_letter_spacing }}px;
+      --word-spacing: {{ block_settings.custom_word_spacing }}px;
+    {% endif %}
+  "
   {%- if block_settings.open_in_new_tab -%}
     target="_blank"
     rel="noopener noreferrer"

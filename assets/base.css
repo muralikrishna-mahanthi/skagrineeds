@@ -4213,3 +4213,14 @@ product-recommendations:has([data-has-recommendations='false']) {
     translate: 0px var(--atc-destination, 0px);
   }
 }
+
+/* Custom typography override class for theme customizer */
+.custom-typography-override,
+.custom-typography-override :is(h1, h2, h3, h4, h5, h6, p, a, span, div, rte-formatter) {
+  font-family: var(--font-family) !important;
+  font-size: var(--font-size) !important;
+  font-weight: var(--font-weight) !important;
+  color: var(--color) !important;
+  letter-spacing: var(--letter-spacing) !important;
+  word-spacing: var(--word-spacing) !important;
+}
