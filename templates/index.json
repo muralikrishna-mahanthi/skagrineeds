@@ -80,8 +80,8 @@
                 "custom_font_size": 52,
                 "custom_font_weight": "900",
                 "custom_font_color": "#1a1a1a",
-                "custom_letter_spacing": 0,
-                "custom_word_spacing": 0
+                "custom_letter_spacing": 1,
+                "custom_word_spacing": 4
               },
               "blocks": {}
             },
@@ -113,8 +113,8 @@
                 "custom_font_size": 52,
                 "custom_font_weight": "400",
                 "custom_font_color": "#008d00",
-                "custom_letter_spacing": 0,
-                "custom_word_spacing": 0
+                "custom_letter_spacing": 1,
+                "custom_word_spacing": 4
               },
               "blocks": {}
             },
