@@ -10,6 +10,14 @@
 
 {% assign block_settings = block.settings %}
 
+{% if block_settings.use_custom_typography and block_settings.custom_font_family != blank %}
+  {% assign font_name_raw = block_settings.custom_font_family | split: ',' | first | remove: "'" | remove: '"' | strip %}
+  {% assign font_url = font_name_raw | replace: ' ', '+' %}
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family={{ font_url }}:wght@{{ block_settings.custom_font_weight }}&display=swap');
+  </style>
+{% endif %}
+
 <a
   {% if link == blank %}
     role="link"
@@ -26,10 +34,11 @@
   style="
     {% render 'size-style', settings: block_settings %}
     {% if block_settings.use_custom_typography %}
-      --font-family: {{ block_settings.custom_font_family }};
+      {% assign font_name_raw = block_settings.custom_font_family | split: ',' | first | remove: "'" | remove: '"' | strip %}
+      --font-family: '{{ font_name_raw }}', sans-serif;
       --font-size: {{ block_settings.custom_font_size }}px;
       --font-weight: {{ block_settings.custom_font_weight }};
-      font-family: {{ block_settings.custom_font_family }};
+      font-family: '{{ font_name_raw }}', sans-serif;
       font-size: {{ block_settings.custom_font_size }}px;
       font-weight: {{ block_settings.custom_font_weight }};
       {% if block_settings.custom_font_color != blank %}
