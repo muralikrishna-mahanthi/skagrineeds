@@ -76,7 +76,7 @@
                 "padding-inline-start": 0,
                 "padding-inline-end": 0,
                 "use_custom_typography": true,
-                "custom_font_family": "var(--font-heading--family)",
+                "custom_font_family": "'DM Sans', sans-serif",
                 "custom_font_size": 45,
                 "custom_font_weight": "800",
                 "custom_font_color": "#03900a",
