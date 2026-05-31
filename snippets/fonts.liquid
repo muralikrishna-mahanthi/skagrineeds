@@ -39,4 +39,52 @@
     fetchpriority="low"
   >
 {%- endunless -%}
+
+{%- comment -%}
+  Dynamically load Google Fonts used in blocks with custom typography enabled.
+  Collects all unique font names from block settings and builds a single Google Fonts URL.
+{%- endcomment -%}
+{%- liquid
+  assign google_font_names = ''
+  for section in sections
+    for block in section.blocks
+      if block.settings.use_custom_typography and block.settings.custom_font_family != blank
+        assign font_value = block.settings.custom_font_family
+        assign font_name = font_value | split: "'" | last | split: "'" | first
+        unless google_font_names contains font_name
+          if google_font_names == ''
+            assign google_font_names = font_name
+          else
+            assign google_font_names = google_font_names | append: '||' | append: font_name
+          endif
+        endunless
+      endif
+    endfor
+  endfor
+-%}
+{%- if google_font_names != '' -%}
+  {%- assign font_name_array = google_font_names | split: '||' -%}
+  {%- assign google_fonts_query = '' -%}
+  {%- for font_name in font_name_array -%}
+    {%- assign encoded_name = font_name | replace: ' ', '+' -%}
+    {%- if google_fonts_query == '' -%}
+      {%- assign google_fonts_query = 'family=' | append: encoded_name | append: ':wght@100;200;300;400;500;600;700;800;900' -%}
+    {%- else -%}
+      {%- assign google_fonts_query = google_fonts_query | append: '&family=' | append: encoded_name | append: ':wght@100;200;300;400;500;600;700;800;900' -%}
+    {%- endif -%}
+  {%- endfor -%}
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?{{ google_fonts_query }}&display=swap"
+  >
+{%- endif -%}
 {% # theme-check-enable %}
