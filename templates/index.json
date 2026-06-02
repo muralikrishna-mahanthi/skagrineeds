@@ -333,7 +333,7 @@
         "color_scheme": "",
         "use_theme_fonts": true,
         "show_decorations": true,
-        "section_min_height": 600,
+        "section_min_height": 700,
         "section_min_height_mobile": 500,
         "padding_block_start": 60,
         "padding_block_end": 60,
