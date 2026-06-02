@@ -26,6 +26,8 @@
     --section-min-height-mobile: {{ section.settings.section_min_height_mobile }}px;
     --section-padding-top: {{ section.settings.padding_block_start }}px;
     --section-padding-bottom: {{ section.settings.padding_block_end }}px;
+    --section-padding-left: {{ section.settings.padding_inline_start }}px;
+    --section-padding-right: {{ section.settings.padding_inline_end }}px;
 
     /* Subheading Typography */
     {% if section.settings.use_theme_fonts %}
@@ -104,6 +106,8 @@
     min-height: var(--section-min-height-mobile);
     padding-top: var(--section-padding-top);
     padding-bottom: var(--section-padding-bottom);
+    padding-left: var(--section-padding-left);
+    padding-right: var(--section-padding-right);
     display: flex;
     align-items: center;
     position: relative;
@@ -121,6 +125,7 @@
     grid-template-columns: 1fr;
     gap: 40px;
     align-items: center;
+    justify-items: center;
     width: 100%;
     position: relative;
     z-index: 2;
@@ -249,10 +254,10 @@
   /* Right Content CSS */
   .aboutsk__content-col--{{ section.id }} {
     width: 100%;
-    text-align: left;
+    text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .aboutsk__subheading--{{ section.id }} {
@@ -296,6 +301,7 @@
     color: var(--description-color);
     line-height: 1.62;
     margin-bottom: 28px;
+    text-align: center;
   }
 
   .aboutsk__description--{{ section.id }} p {
@@ -390,7 +396,7 @@
   .aboutsk__button-container {
     width: 100%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
   }
 
   .aboutsk__button--{{ section.id }} {
@@ -703,6 +709,26 @@
       "step": 5,
       "unit": "px",
       "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_inline_start",
+      "label": "Padding Left",
+      "min": 0,
+      "max": 150,
+      "step": 1,
+      "unit": "px",
+      "default": 5
+    },
+    {
+      "type": "range",
+      "id": "padding_inline_end",
+      "label": "Padding Right",
+      "min": 0,
+      "max": 150,
+      "step": 1,
+      "unit": "px",
+      "default": 5
     },
     {
       "type": "header",
