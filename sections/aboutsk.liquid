@@ -1,0 +1,1155 @@
+{% liquid
+  assign color_scheme = section.settings.color_scheme
+%}
+
+{% style %}
+  {%- unless section.settings.use_theme_fonts -%}
+    {%- if section.settings.subheading_custom_font == blank -%}
+      {{ section.settings.subheading_font | font_face: font_display: 'swap' }}
+    {%- endif -%}
+    {%- if section.settings.heading_custom_font == blank -%}
+      {{ section.settings.heading_font | font_face: font_display: 'swap' }}
+    {%- endif -%}
+    {%- if section.settings.description_custom_font == blank -%}
+      {{ section.settings.description_font | font_face: font_display: 'swap' }}
+    {%- endif -%}
+    {%- if section.settings.blocks_custom_font == blank -%}
+      {{ section.settings.blocks_font | font_face: font_display: 'swap' }}
+    {%- endif -%}
+    {%- if section.settings.button_custom_font == blank -%}
+      {{ section.settings.button_font | font_face: font_display: 'swap' }}
+    {%- endif -%}
+  {%- endunless -%}
+
+  .aboutsk--{{ section.id }} {
+    --section-min-height-desktop: {{ section.settings.section_min_height }}px;
+    --section-min-height-mobile: {{ section.settings.section_min_height_mobile }}px;
+    --section-padding-top: {{ section.settings.padding_block_start }}px;
+    --section-padding-bottom: {{ section.settings.padding_block_end }}px;
+
+    /* Subheading Typography */
+    {% if section.settings.use_theme_fonts %}
+      --subheading-font-family: var(--font-subheading--family, inherit);
+    {% elsif section.settings.subheading_custom_font != blank %}
+      --subheading-font-family: {{ section.settings.subheading_custom_font }};
+    {% else %}
+      --subheading-font-family: {{ section.settings.subheading_font.family }}, {{ section.settings.subheading_font.fallback_families }};
+    {% endif %}
+    --subheading-font-size: {{ section.settings.subheading_size }}px;
+    --subheading-font-weight: {{ section.settings.subheading_weight }};
+    --subheading-color: {{ section.settings.subheading_color }};
+
+    /* Heading Typography */
+    {% if section.settings.use_theme_fonts %}
+      --heading-font-family: var(--font-heading--family, inherit);
+    {% elsif section.settings.heading_custom_font != blank %}
+      --heading-font-family: {{ section.settings.heading_custom_font }};
+    {% else %}
+      --heading-font-family: {{ section.settings.heading_font.family }}, {{ section.settings.heading_font.fallback_families }};
+    {% endif %}
+    --heading-font-size: {{ section.settings.heading_size }}px;
+    --heading-font-weight: {{ section.settings.heading_weight }};
+    --heading-color: {{ section.settings.heading_color }};
+    --heading-highlight-color: {{ section.settings.heading_highlight_color }};
+
+    /* Description Typography */
+    {% if section.settings.use_theme_fonts %}
+      --description-font-family: var(--font-body--family, inherit);
+    {% elsif section.settings.description_custom_font != blank %}
+      --description-font-family: {{ section.settings.description_custom_font }};
+    {% else %}
+      --description-font-family: {{ section.settings.description_font.family }}, {{ section.settings.description_font.fallback_families }};
+    {% endif %}
+    --description-font-size: {{ section.settings.description_size }}px;
+    --description-font-weight: {{ section.settings.description_weight }};
+    --description-color: {{ section.settings.description_color }};
+
+    /* Blocks Typography */
+    {% if section.settings.use_theme_fonts %}
+      --blocks-font-family: var(--font-body--family, inherit);
+    {% elsif section.settings.blocks_custom_font != blank %}
+      --blocks-font-family: {{ section.settings.blocks_custom_font }};
+    {% else %}
+      --blocks-font-family: {{ section.settings.blocks_font.family }}, {{ section.settings.blocks_font.fallback_families }};
+    {% endif %}
+    --blocks-value-size: {{ section.settings.blocks_value_size }}px;
+    --blocks-value-weight: {{ section.settings.blocks_value_weight }};
+    --blocks-value-color: {{ section.settings.blocks_value_color }};
+    --blocks-label-size: {{ section.settings.blocks_label_size }}px;
+    --blocks-label-weight: {{ section.settings.blocks_label_weight }};
+    --blocks-label-color: {{ section.settings.blocks_label_color }};
+    --blocks-bg-color: {{ section.settings.blocks_bg_color }};
+    --blocks-border-color: {{ section.settings.blocks_border_color }};
+
+    /* Button Typography & Styling */
+    {% if section.settings.use_theme_fonts %}
+      --button-font-family: var(--font-body--family, inherit);
+    {% elsif section.settings.button_custom_font != blank %}
+      --button-font-family: {{ section.settings.button_custom_font }};
+    {% else %}
+      --button-font-family: {{ section.settings.button_font.family }}, {{ section.settings.button_font.fallback_families }};
+    {% endif %}
+    --button-font-size: {{ section.settings.button_size }}px;
+    --button-font-weight: {{ section.settings.button_weight }};
+    --button-color: {{ section.settings.button_color }};
+    --button-bg-color: {{ section.settings.button_bg_color }};
+    --button-hover-color: {{ section.settings.button_hover_color }};
+    --button-hover-bg-color: {{ section.settings.button_hover_bg_color }};
+    --button-border-radius: {{ section.settings.button_radius }}px;
+    --button-border-color: {{ section.settings.button_border_color }};
+    --button-border-width: {{ section.settings.button_border_width }}px;
+  }
+
+  .aboutsk--{{ section.id }} {
+    min-height: var(--section-min-height-mobile);
+    padding-top: var(--section-padding-top);
+    padding-bottom: var(--section-padding-bottom);
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  @media screen and (min-width: 990px) {
+    .aboutsk--{{ section.id }} {
+      min-height: var(--section-min-height-desktop);
+    }
+  }
+
+  .aboutsk__container--{{ section.id }} {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+  }
+
+  @media screen and (min-width: 990px) {
+    .aboutsk__container--{{ section.id }} {
+      grid-template-columns: 1fr 1.05fr;
+      gap: 60px;
+    }
+  }
+
+  /* Left Collage CSS */
+  .aboutsk__collage-wrapper {
+    position: relative;
+    width: 100%;
+    height: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 990px) {
+    .aboutsk__collage-wrapper {
+      height: 480px;
+    }
+  }
+
+  .aboutsk__collage {
+    position: relative;
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 16px;
+    width: 95%;
+    height: 100%;
+  }
+
+  .aboutsk__collage-left-col {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: 100%;
+    justify-content: center;
+  }
+
+  /* Custom slanted skew shapes */
+  .aboutsk__collage-shape {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    box-sizing: border-box;
+    border: 4px solid #ffffff;
+    transform: skewX(-13deg);
+  }
+
+  .aboutsk__collage-shape:hover {
+    transform: skewX(-13deg) scale(1.02);
+    z-index: 10;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  }
+
+  .aboutsk__collage-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transform: skewX(13deg) scale(1.25);
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  .aboutsk__collage-shape:hover .aboutsk__collage-img {
+    transform: skewX(13deg) scale(1.3);
+  }
+
+  /* Sprout Wrapper (Top Left) */
+  .aboutsk__collage-sprout-wrapper {
+    height: 52%;
+    border-radius: 80px 16px 16px 16px;
+    margin-left: 20px;
+  }
+
+  /* Farmer Wrapper (Bottom Left) */
+  .aboutsk__collage-farmer-wrapper {
+    height: 44%;
+    border-radius: 16px 16px 16px 80px;
+    margin-left: 5px;
+  }
+
+  /* Storefront Wrapper (Right Side Parallelogram) */
+  .aboutsk__collage-storefront-wrapper {
+    height: 96%;
+    align-self: center;
+    border-radius: 24px 80px 24px 80px;
+    z-index: 2;
+  }
+
+  /* Diagonal Green Accent Bar on divider */
+  .aboutsk__collage-accent-bar {
+    position: absolute;
+    left: -12px;
+    top: 15%;
+    height: 70%;
+    width: 12px;
+    background-color: #7BB828;
+    transform: skewX(-13deg);
+    border-radius: 6px;
+    z-index: 1;
+    display: none;
+  }
+
+  /* Thick Green Accent bar running on the right side of the building image */
+  .aboutsk__collage-right-bar {
+    position: absolute;
+    right: -15px;
+    top: 8%;
+    height: 84%;
+    width: 10px;
+    background-color: #6FB236;
+    transform: skewX(-13deg);
+    border-radius: 6px;
+    z-index: 1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  /* Right Content CSS */
+  .aboutsk__content-col--{{ section.id }} {
+    width: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .aboutsk__subheading--{{ section.id }} {
+    font-family: var(--subheading-font-family);
+    font-size: var(--subheading-font-size);
+    font-weight: var(--subheading-font-weight);
+    color: var(--subheading-color);
+    letter-spacing: 0.08em;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    display: inline-block;
+  }
+
+  .aboutsk__heading--{{ section.id }} {
+    font-family: var(--heading-font-family);
+    font-size: calc(var(--heading-font-size) * 0.78);
+    font-weight: var(--heading-font-weight);
+    color: var(--heading-color);
+    line-height: 1.22;
+    margin-top: 0;
+    margin-bottom: 20px;
+    letter-spacing: -0.015em;
+  }
+
+  @media screen and (min-width: 750px) {
+    .aboutsk__heading--{{ section.id }} {
+      font-size: var(--heading-font-size);
+    }
+  }
+
+  .aboutsk__heading--{{ section.id }} strong,
+  .aboutsk__heading--{{ section.id }} b {
+    color: var(--heading-highlight-color);
+    font-weight: inherit;
+  }
+
+  .aboutsk__description--{{ section.id }} {
+    font-family: var(--description-font-family);
+    font-size: var(--description-font-size);
+    font-weight: var(--description-font-weight);
+    color: var(--description-color);
+    line-height: 1.62;
+    margin-bottom: 28px;
+  }
+
+  .aboutsk__description--{{ section.id }} p {
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+
+  .aboutsk__description--{{ section.id }} p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Bottom 4 Blocks CSS */
+  .aboutsk__blocks-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    width: 100%;
+    margin-bottom: 32px;
+  }
+
+  @media screen and (min-width: 480px) {
+    .aboutsk__blocks-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    .aboutsk__blocks-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .aboutsk__block-card {
+    background-color: var(--blocks-bg-color);
+    border: 1px solid var(--blocks-border-color);
+    border-radius: 12px;
+    padding: 12px 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .aboutsk__block-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(111, 178, 54, 0.08);
+    border-color: rgba(111, 178, 54, 0.3);
+  }
+
+  .aboutsk__block-icon-wrapper {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background-color: rgba(111, 178, 54, 0.08);
+    color: #6FB236;
+  }
+
+  .aboutsk__block-icon-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .aboutsk__block-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .aboutsk__block-value {
+    font-family: var(--blocks-font-family);
+    font-size: var(--blocks-value-size);
+    font-weight: var(--blocks-value-weight);
+    color: var(--blocks-value-color);
+    line-height: 1.1;
+  }
+
+  .aboutsk__block-label {
+    font-family: var(--blocks-font-family);
+    font-size: var(--blocks-label-size);
+    font-weight: var(--blocks-label-weight);
+    color: var(--blocks-label-color);
+    line-height: 1.2;
+    margin-top: 2px;
+  }
+
+  /* Button Custom Styling */
+  .aboutsk__button-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .aboutsk__button--{{ section.id }} {
+    font-family: var(--button-font-family);
+    font-size: var(--button-font-size);
+    font-weight: var(--button-font-weight);
+    color: var(--button-color);
+    background-color: var(--button-bg-color);
+    border-radius: var(--button-border-radius);
+    border: var(--button-border-width) solid var(--button-border-color);
+    padding: 14px 28px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: 0 4px 15px rgba(111, 178, 54, 0.15);
+    cursor: pointer;
+  }
+
+  .aboutsk__button--{{ section.id }}:hover {
+    transform: translateY(-2px);
+    color: var(--button-hover-color);
+    background-color: var(--button-hover-bg-color);
+    border-color: var(--button-hover-bg-color);
+    box-shadow: 0 6px 20px rgba(111, 178, 54, 0.25);
+  }
+
+  .aboutsk__button-icon {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+    transition: transform 0.25s ease;
+  }
+
+  .aboutsk__button--{{ section.id }}:hover .aboutsk__button-icon {
+    transform: translateX(4px);
+  }
+
+  /* Elegant floating background leaf decorations */
+  .aboutsk__bg-decor-1 {
+    position: absolute;
+    right: -60px;
+    top: 15%;
+    width: 200px;
+    height: 200px;
+    opacity: 0.08;
+    pointer-events: none;
+    transform: rotate(25deg);
+    z-index: 1;
+  }
+
+  .aboutsk__bg-decor-2 {
+    position: absolute;
+    right: 20px;
+    bottom: 10%;
+    width: 150px;
+    height: 150px;
+    opacity: 0.06;
+    pointer-events: none;
+    transform: rotate(-15deg);
+    z-index: 1;
+  }
+{% endstyle %}
+
+<div class="aboutsk aboutsk--{{ section.id }} color-{{ color_scheme }}">
+  <!-- Background Decorations -->
+  {%- if section.settings.show_decorations -%}
+    <div class="aboutsk__bg-decor-1">
+      <svg viewBox="0 0 100 100" fill="#6FB236">
+        <path d="M50 0C50 0 20 30 20 60C20 76.5 33.5 90 50 90C66.5 90 80 76.5 80 60C80 30 50 0 50 0ZM50 82C37.8 82 28 72.2 28 60C28 42 46.2 19 50 14.5C53.8 19 72 42 72 60C72 72.2 62.2 82 50 82Z"/>
+      </svg>
+    </div>
+    <div class="aboutsk__bg-decor-2">
+      <svg viewBox="0 0 100 100" fill="#6FB236">
+        <path d="M50 10C30 30 30 60 50 90C70 60 70 30 50 10ZM50 78C40 55 42 35 50 22C58 35 60 55 50 78Z"/>
+      </svg>
+    </div>
+  {%- endif -%}
+
+  <div class="aboutsk__container aboutsk__container--{{ section.id }} page-width">
+    <!-- Left Column: Images Collage -->
+    <div class="aboutsk__collage-wrapper">
+      <div class="aboutsk__collage">
+        <div class="aboutsk__collage-left-col">
+          <!-- Top Left Sprout Image -->
+          <div class="aboutsk__collage-shape aboutsk__collage-sprout-wrapper">
+            {%- if section.settings.image_1 != blank -%}
+              <img
+                src="{{ section.settings.image_1 | image_url: width: 600 }}"
+                alt="{{ section.settings.image_1.alt | escape }}"
+                loading="lazy"
+                width="{{ section.settings.image_1.width }}"
+                height="{{ section.settings.image_1.height }}"
+                class="aboutsk__collage-img"
+              >
+            {%- else -%}
+              {{ 'image' | placeholder_svg_tag: 'placeholder-svg aboutsk__collage-img' }}
+            {%- endif -%}
+          </div>
+
+          <!-- Bottom Left Farmer Image -->
+          <div class="aboutsk__collage-shape aboutsk__collage-farmer-wrapper">
+            {%- if section.settings.image_2 != blank -%}
+              <img
+                src="{{ section.settings.image_2 | image_url: width: 600 }}"
+                alt="{{ section.settings.image_2.alt | escape }}"
+                loading="lazy"
+                width="{{ section.settings.image_2.width }}"
+                height="{{ section.settings.image_2.height }}"
+                class="aboutsk__collage-img"
+              >
+            {%- else -%}
+              {{ 'image' | placeholder_svg_tag: 'placeholder-svg aboutsk__collage-img' }}
+            {%- endif -%}
+          </div>
+        </div>
+
+        <!-- Storefront Image -->
+        <div class="aboutsk__collage-shape aboutsk__collage-storefront-wrapper">
+          {%- if section.settings.image_3 != blank -%}
+            <img
+              src="{{ section.settings.image_3 | image_url: width: 800 }}"
+              alt="{{ section.settings.image_3.alt | escape }}"
+              loading="lazy"
+              width="{{ section.settings.image_3.width }}"
+              height="{{ section.settings.image_3.height }}"
+              class="aboutsk__collage-img"
+            >
+          {%- else -%}
+            {{ 'image' | placeholder_svg_tag: 'placeholder-svg aboutsk__collage-img' }}
+          {%- endif -%}
+
+          <!-- Green Diagonal Stripe on Storefront Left Divider -->
+          <div class="aboutsk__collage-accent-bar"></div>
+          
+          <!-- Green Accent Bar on the right side of the image -->
+          <div class="aboutsk__collage-right-bar"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column: Content -->
+    <div class="aboutsk__content-col aboutsk__content-col--{{ section.id }}">
+      {%- if section.settings.subheading_text != blank -%}
+        <span class="aboutsk__subheading aboutsk__subheading--{{ section.id }}">
+          {{- section.settings.subheading_text | escape -}}
+        </span>
+      {%- endif -%}
+
+      {%- if section.settings.heading_text != blank -%}
+        <h2 class="aboutsk__heading aboutsk__heading--{{ section.id }}">
+          {{- section.settings.heading_text -}}
+        </h2>
+      {%- endif -%}
+
+      {%- if section.settings.description_text != blank -%}
+        <div class="aboutsk__description aboutsk__description--{{ section.id }} rte">
+          {{ section.settings.description_text }}
+        </div>
+      {%- endif -%}
+
+      <!-- 4 Custom Blocks Grid -->
+      <div class="aboutsk__blocks-grid">
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'metric_block' -%}
+            <div class="aboutsk__block-card" {{ block.shopify_attributes }}>
+              <div class="aboutsk__block-icon-wrapper">
+                {%- if block.settings.icon_image != blank -%}
+                  <img
+                    src="{{ block.settings.icon_image | image_url: width: 100 }}"
+                    alt="{{ block.settings.icon_image.alt | escape }}"
+                    loading="lazy"
+                    width="40"
+                    height="40"
+                    class="aboutsk__block-icon-image"
+                  >
+                {%- else -%}
+                  <!-- High Quality SVG Defaults -->
+                  {%- case block.settings.default_icon -%}
+                    {%- when 'products' -%}
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"></polygon>
+                        <line x1="12" y1="22" x2="12" y2="15.5"></line>
+                        <polyline points="22 8.5 12 15.5 2 8.5"></polyline>
+                        <polyline points="2 15.5 12 8.5 22 15.5"></polyline>
+                        <line x1="12" y1="2" x2="12" y2="8.5"></line>
+                      </svg>
+                    {%- when 'farmers' -%}
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                      </svg>
+                    {%- when 'distributors' -%}
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                      </svg>
+                    {%- when 'states' -%}
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                      </svg>
+                    {%- else -%}
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="8" x2="12" y2="16"></line>
+                        <line x1="8" y1="12" x2="16" y2="12"></line>
+                      </svg>
+                  {%- endcase -%}
+                {%- endif -%}
+              </div>
+              <div class="aboutsk__block-info">
+                <span class="aboutsk__block-value">{{ block.settings.value_text | escape }}</span>
+                <span class="aboutsk__block-label">{{ block.settings.label_text | escape }}</span>
+              </div>
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+
+      <!-- Button CTA -->
+      {%- if section.settings.button_label != blank -%}
+        <div class="aboutsk__button-container">
+          <a
+            href="{{ section.settings.button_link | default: '#' }}"
+            class="aboutsk__button aboutsk__button--{{ section.id }}"
+          >
+            <!-- Leaf SVG Icon matching image -->
+            <svg class="aboutsk__button-icon" viewBox="0 0 24 24">
+              <path d="M17 8C8 8 4 14 4 20C4 20 8 16 13 16C13 16 12 17 11 18C15 18 19 14 20 10C20 9 19 8 17 8ZM14.3 14C11.3 14 8.7 15.3 7 17.2C8 14.3 10.7 11.5 14.5 10.8C14.7 11.8 14.6 13 14.3 14Z" />
+            </svg>
+            <span>{{ section.settings.button_label | escape }}</span>
+          </a>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "About SK Agrineeds",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "max_blocks": 4,
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:settings.color_scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "checkbox",
+      "id": "use_theme_fonts",
+      "label": "Use theme global fonts",
+      "default": false,
+      "info": "If checked, custom settings below are overridden by theme defaults."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_decorations",
+      "label": "Show floating leaf decorations",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Section Spacing & Height"
+    },
+    {
+      "type": "range",
+      "id": "section_min_height",
+      "label": "Desktop Section Min Height",
+      "min": 300,
+      "max": 1200,
+      "step": 20,
+      "default": 600,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "section_min_height_mobile",
+      "label": "Mobile Section Min Height",
+      "min": 200,
+      "max": 1000,
+      "step": 20,
+      "default": 500,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_block_start",
+      "label": "Padding Top",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_block_end",
+      "label": "Padding Bottom",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "header",
+      "content": "Left Collage Images"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_1",
+      "label": "Image 1 (Top Left - Sprout)"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "Image 2 (Bottom Left - Farmer)"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_3",
+      "label": "Image 3 (Right - Storefront/Building)"
+    },
+    {
+      "type": "header",
+      "content": "Subheading Settings"
+    },
+    {
+      "type": "text",
+      "id": "subheading_text",
+      "label": "Subheading Text",
+      "default": "ABOUT US"
+    },
+    {
+      "type": "font_picker",
+      "id": "subheading_font",
+      "label": "Subheading Font Family (Shopify library)",
+      "default": "assistant_n4"
+    },
+    {
+      "type": "text",
+      "id": "subheading_custom_font",
+      "label": "Custom Font Family (Text Input)",
+      "info": "Enter a system/web font name (e.g. 'Outfit', 'Inter') to override the font picker above."
+    },
+    {
+      "type": "range",
+      "id": "subheading_size",
+      "label": "Subheading Font Size",
+      "min": 10,
+      "max": 48,
+      "step": 1,
+      "default": 14,
+      "unit": "px"
+    },
+    {
+      "type": "select",
+      "id": "subheading_weight",
+      "label": "Subheading Font Weight",
+      "options": [
+        { "value": "300", "label": "300 (Light)" },
+        { "value": "400", "label": "400 (Normal)" },
+        { "value": "500", "label": "500 (Medium)" },
+        { "value": "600", "label": "600 (Semi-Bold)" },
+        { "value": "700", "label": "700 (Bold)" },
+        { "value": "800", "label": "800 (Extra Bold)" }
+      ],
+      "default": "700"
+    },
+    {
+      "type": "color",
+      "id": "subheading_color",
+      "label": "Subheading Color",
+      "default": "#4C9A2A"
+    },
+    {
+      "type": "header",
+      "content": "Heading Settings"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading_text",
+      "label": "Heading Text",
+      "default": "Innovating for Better Nutrition. <strong>Empowering Farmers</strong>"
+    },
+    {
+      "type": "font_picker",
+      "id": "heading_font",
+      "label": "Heading Font Family (Shopify library)",
+      "default": "assistant_n4"
+    },
+    {
+      "type": "text",
+      "id": "heading_custom_font",
+      "label": "Custom Font Family (Text Input)",
+      "info": "Enter a system/web font name to override the font picker above."
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "Heading Font Size",
+      "min": 16,
+      "max": 80,
+      "step": 1,
+      "default": 36,
+      "unit": "px"
+    },
+    {
+      "type": "select",
+      "id": "heading_weight",
+      "label": "Heading Font Weight",
+      "options": [
+        { "value": "300", "label": "300 (Light)" },
+        { "value": "400", "label": "400 (Normal)" },
+        { "value": "500", "label": "500 (Medium)" },
+        { "value": "600", "label": "600 (Semi-Bold)" },
+        { "value": "700", "label": "700 (Bold)" },
+        { "value": "800", "label": "800 (Extra Bold)" }
+      ],
+      "default": "700"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "heading_highlight_color",
+      "label": "Heading Bold/Highlight Color",
+      "default": "#007A33"
+    },
+    {
+      "type": "header",
+      "content": "Description Settings"
+    },
+    {
+      "type": "richtext",
+      "id": "description_text",
+      "label": "Description Text",
+      "default": "<p>SK Agrineeds is committed to delivering high quality crop nutrition solutions. Our Micronutrients, Bio Stimulants, Water Soluble Fertilizers and Mixed Fertilizers are scientifically formulated to improve crop health, yield and quality.</p>"
+    },
+    {
+      "type": "font_picker",
+      "id": "description_font",
+      "label": "Description Font Family (Shopify library)",
+      "default": "assistant_n4"
+    },
+    {
+      "type": "text",
+      "id": "description_custom_font",
+      "label": "Custom Font Family (Text Input)",
+      "info": "Enter a system/web font name to override the font picker above."
+    },
+    {
+      "type": "range",
+      "id": "description_size",
+      "label": "Description Font Size",
+      "min": 10,
+      "max": 36,
+      "step": 1,
+      "default": 16,
+      "unit": "px"
+    },
+    {
+      "type": "select",
+      "id": "description_weight",
+      "label": "Description Font Weight",
+      "options": [
+        { "value": "300", "label": "300 (Light)" },
+        { "value": "400", "label": "400 (Normal)" },
+        { "value": "500", "label": "500 (Medium)" },
+        { "value": "600", "label": "600 (Semi-Bold)" },
+        { "value": "700", "label": "700 (Bold)" }
+      ],
+      "default": "400"
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Description Color",
+      "default": "#555555"
+    },
+    {
+      "type": "header",
+      "content": "Metric Blocks - Typography & Style (All Blocks)"
+    },
+    {
+      "type": "font_picker",
+      "id": "blocks_font",
+      "label": "Blocks Font Family (Shopify library)",
+      "default": "assistant_n4"
+    },
+    {
+      "type": "text",
+      "id": "blocks_custom_font",
+      "label": "Custom Font Family (Text Input)",
+      "info": "Enter a system/web font name to override the font picker above."
+    },
+    {
+      "type": "range",
+      "id": "blocks_value_size",
+      "label": "Metric Value Font Size",
+      "min": 14,
+      "max": 50,
+      "step": 1,
+      "default": 24,
+      "unit": "px"
+    },
+    {
+      "type": "select",
+      "id": "blocks_value_weight",
+      "label": "Metric Value Font Weight",
+      "options": [
+        { "value": "400", "label": "400 (Normal)" },
+        { "value": "500", "label": "500 (Medium)" },
+        { "value": "600", "label": "600 (Semi-Bold)" },
+        { "value": "700", "label": "700 (Bold)" },
+        { "value": "800", "label": "800 (Extra Bold)" }
+      ],
+      "default": "700"
+    },
+    {
+      "type": "color",
+      "id": "blocks_value_color",
+      "label": "Metric Value Color",
+      "default": "#121212"
+    },
+    {
+      "type": "range",
+      "id": "blocks_label_size",
+      "label": "Metric Label Font Size",
+      "min": 10,
+      "max": 30,
+      "step": 1,
+      "default": 13,
+      "unit": "px"
+    },
+    {
+      "type": "select",
+      "id": "blocks_label_weight",
+      "label": "Metric Label Font Weight",
+      "options": [
+        { "value": "300", "label": "300 (Light)" },
+        { "value": "400", "label": "400 (Normal)" },
+        { "value": "500", "label": "500 (Medium)" },
+        { "value": "600", "label": "600 (Semi-Bold)" },
+        { "value": "700", "label": "700 (Bold)" }
+      ],
+      "default": "500"
+    },
+    {
+      "type": "color",
+      "id": "blocks_label_color",
+      "label": "Metric Label Color",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "blocks_bg_color",
+      "label": "Block Card Background Color",
+      "default": "#F9FBF6"
+    },
+    {
+      "type": "color",
+      "id": "blocks_border_color",
+      "label": "Block Card Border Color",
+      "default": "#EDF5E6"
+    },
+    {
+      "type": "header",
+      "content": "Button Settings"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Label",
+      "default": "OUR PRODUCTS"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "font_picker",
+      "id": "button_font",
+      "label": "Button Font Family (Shopify library)",
+      "default": "assistant_n4"
+    },
+    {
+      "type": "text",
+      "id": "button_custom_font",
+      "label": "Custom Font Family (Text Input)",
+      "info": "Enter a system/web font name to override the font picker above."
+    },
+    {
+      "type": "range",
+      "id": "button_size",
+      "label": "Button Font Size",
+      "min": 10,
+      "max": 36,
+      "step": 1,
+      "default": 14,
+      "unit": "px"
+    },
+    {
+      "type": "select",
+      "id": "button_weight",
+      "label": "Button Font Weight",
+      "options": [
+        { "value": "300", "label": "300 (Light)" },
+        { "value": "400", "label": "400 (Normal)" },
+        { "value": "500", "label": "500 (Medium)" },
+        { "value": "600", "label": "600 (Semi-Bold)" },
+        { "value": "700", "label": "700 (Bold)" },
+        { "value": "800", "label": "800 (Extra Bold)" }
+      ],
+      "default": "700"
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "Button Text Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "button_bg_color",
+      "label": "Button Background Color",
+      "default": "#6FB236"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_color",
+      "label": "Button Hover Text Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_bg_color",
+      "label": "Button Hover Background Color",
+      "default": "#5A9E24"
+    },
+    {
+      "type": "color",
+      "id": "button_border_color",
+      "label": "Button Border Color",
+      "default": "transparent"
+    },
+    {
+      "type": "range",
+      "id": "button_border_width",
+      "label": "Button Border Width",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "default": 0,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "button_radius",
+      "label": "Button Border Radius",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 30,
+      "unit": "px"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "metric_block",
+      "name": "Metric Block",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "text",
+          "id": "value_text",
+          "label": "Metric Value",
+          "default": "100+"
+        },
+        {
+          "type": "text",
+          "id": "label_text",
+          "label": "Metric Label",
+          "default": "Products"
+        },
+        {
+          "type": "select",
+          "id": "default_icon",
+          "label": "Default Icon",
+          "options": [
+            { "value": "products", "label": "Products (Cube)" },
+            { "value": "farmers", "label": "Farmers (Group)" },
+            { "value": "distributors", "label": "Distributors (Shield)" },
+            { "value": "states", "label": "States (Map Pin)" },
+            { "value": "generic", "label": "Generic (Plus)" }
+          ],
+          "default": "generic"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_image",
+          "label": "Custom Icon Image",
+          "info": "Overrides the default icon above if selected."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "About SK Agrineeds",
+      "blocks": [
+        {
+          "type": "metric_block",
+          "settings": {
+            "value_text": "100+",
+            "label_text": "Products",
+            "default_icon": "products"
+          }
+        },
+        {
+          "type": "metric_block",
+          "settings": {
+            "value_text": "5000+",
+            "label_text": "Happy Farmers",
+            "default_icon": "farmers"
+          }
+        },
+        {
+          "type": "metric_block",
+          "settings": {
+            "value_text": "100+",
+            "label_text": "Distributors",
+            "default_icon": "distributors"
+          }
+        },
+        {
+          "type": "metric_block",
+          "settings": {
+            "value_text": "10+",
+            "label_text": "States Presence",
+            "default_icon": "states"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
