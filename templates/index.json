@@ -285,9 +285,105 @@
         "padding-block-start": 24,
         "padding-block-end": 100
       }
+    },
+    "aboutsk_YrrpKJ": {
+      "type": "aboutsk",
+      "blocks": {
+        "metric_block_TPPMTB": {
+          "type": "metric_block",
+          "settings": {
+            "value_text": "100+",
+            "label_text": "Products",
+            "default_icon": "products"
+          }
+        },
+        "metric_block_gJpibW": {
+          "type": "metric_block",
+          "settings": {
+            "value_text": "5000+",
+            "label_text": "Happy Farmers",
+            "default_icon": "farmers"
+          }
+        },
+        "metric_block_3gKyEL": {
+          "type": "metric_block",
+          "settings": {
+            "value_text": "100+",
+            "label_text": "Distributors",
+            "default_icon": "distributors"
+          }
+        },
+        "metric_block_BFAGtr": {
+          "type": "metric_block",
+          "settings": {
+            "value_text": "10+",
+            "label_text": "States Presence",
+            "default_icon": "states"
+          }
+        }
+      },
+      "block_order": [
+        "metric_block_TPPMTB",
+        "metric_block_gJpibW",
+        "metric_block_3gKyEL",
+        "metric_block_BFAGtr"
+      ],
+      "name": "About SK Agrineeds",
+      "settings": {
+        "color_scheme": "",
+        "use_theme_fonts": true,
+        "show_decorations": true,
+        "section_min_height": 600,
+        "section_min_height_mobile": 500,
+        "padding_block_start": 60,
+        "padding_block_end": 60,
+        "subheading_text": "ABOUT US",
+        "subheading_font": "assistant_n4",
+        "subheading_custom_font": "",
+        "subheading_size": 14,
+        "subheading_weight": "700",
+        "subheading_color": "#4C9A2A",
+        "heading_text": "Innovating for Better Nutrition. <strong>Empowering Farmers</strong>",
+        "heading_font": "assistant_n4",
+        "heading_custom_font": "",
+        "heading_size": 36,
+        "heading_weight": "700",
+        "heading_color": "#121212",
+        "heading_highlight_color": "#007A33",
+        "description_text": "<p>SK Agrineeds is committed to delivering high quality crop nutrition solutions. Our Micronutrients, Bio Stimulants, Water Soluble Fertilizers and Mixed Fertilizers are scientifically formulated to improve crop health, yield and quality.</p>",
+        "description_font": "assistant_n4",
+        "description_custom_font": "",
+        "description_size": 16,
+        "description_weight": "400",
+        "description_color": "#555555",
+        "blocks_font": "assistant_n4",
+        "blocks_custom_font": "",
+        "blocks_value_size": 24,
+        "blocks_value_weight": "700",
+        "blocks_value_color": "#121212",
+        "blocks_label_size": 13,
+        "blocks_label_weight": "500",
+        "blocks_label_color": "#666666",
+        "blocks_bg_color": "#F9FBF6",
+        "blocks_border_color": "#EDF5E6",
+        "button_label": "OUR PRODUCTS",
+        "button_link": "",
+        "button_font": "assistant_n4",
+        "button_custom_font": "",
+        "button_size": 14,
+        "button_weight": "700",
+        "button_color": "#FFFFFF",
+        "button_bg_color": "#6FB236",
+        "button_hover_color": "#FFFFFF",
+        "button_hover_bg_color": "#5A9E24",
+        "button_border_color": "transparent",
+        "button_border_width": 0,
+        "button_radius": 30
+      }
     }
   },
   "order": [
-    "hero_p9CmMG"
+    "hero_p9CmMG",
+    "aboutsk_YrrpKJ"
   ]
 }
