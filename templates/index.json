@@ -596,9 +596,9 @@
           "settings": {
             "link": "",
             "image_ratio": "landscape",
-            "width": "custom",
+            "width": "fill",
             "custom_width": 70,
-            "width_mobile": "custom",
+            "width_mobile": "fill",
             "custom_width_mobile": 70,
             "height": "fit",
             "border": "none",
