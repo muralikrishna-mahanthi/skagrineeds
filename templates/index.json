@@ -613,42 +613,121 @@
           },
           "blocks": {}
         },
-        "contact_form_tiJjKc": {
-          "type": "contact-form",
-          "name": "t:names.contact_form",
+        "group_T8aeQa": {
+          "type": "group",
+          "name": "t:names.group",
           "settings": {
-            "width": "fit-content",
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "width": "fill",
             "custom_width": 100,
-            "width_mobile": "fit-content",
+            "width_mobile": "fill",
             "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
             "inherit_color_scheme": true,
             "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
             "padding-inline-end": 0
           },
           "blocks": {
-            "submit-button": {
-              "type": "contact-form-submit-button",
-              "static": true,
+            "text_tBinBE": {
+              "type": "text",
+              "name": "t:names.heading",
               "settings": {
-                "label": "Submit",
-                "style_class": "button",
+                "text": "<p>Dealer / Distributor Enquiry</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "custom",
+                "font": "var(--font-heading--family)",
+                "font_size": "1.5rem",
+                "line_height": "normal",
+                "letter_spacing": "loose",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0,
+                "use_custom_typography": false,
+                "custom_font_family": "Inter",
+                "custom_font_size": 16,
+                "custom_font_weight": "400",
+                "custom_font_color": "#000000",
+                "custom_letter_spacing": 0,
+                "custom_word_spacing": 0
+              },
+              "blocks": {}
+            },
+            "contact_form_b8gW3K": {
+              "type": "contact-form",
+              "name": "t:names.contact_form",
+              "settings": {
                 "width": "fit-content",
                 "custom_width": 100,
                 "width_mobile": "fit-content",
-                "custom_width_mobile": 100
+                "custom_width_mobile": 100,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
               },
-              "blocks": {}
+              "blocks": {
+                "submit-button": {
+                  "type": "contact-form-submit-button",
+                  "static": true,
+                  "settings": {
+                    "label": "Submit",
+                    "style_class": "button",
+                    "width": "fit-content",
+                    "custom_width": 100,
+                    "width_mobile": "fit-content",
+                    "custom_width_mobile": 100
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": []
             }
           },
-          "block_order": []
+          "block_order": [
+            "text_tBinBE",
+            "contact_form_b8gW3K"
+          ]
         }
       },
       "block_order": [
         "image_KKazHc",
-        "contact_form_tiJjKc"
+        "group_T8aeQa"
       ],
       "name": "t:names.contact_form",
       "settings": {
