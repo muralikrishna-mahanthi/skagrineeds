@@ -344,8 +344,8 @@
         "gradient_direction": "to top",
         "blurred_reflection": false,
         "reflection_opacity": 11,
-        "padding-block-start": 40,
-        "padding-block-end": 40
+        "padding-block-start": 100,
+        "padding-block-end": 32
       }
     },
     "collection_list_Hnwe9L": {
