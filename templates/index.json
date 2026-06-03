@@ -595,7 +595,7 @@
           "name": "t:names.image",
           "settings": {
             "link": "",
-            "image_ratio": "square",
+            "image_ratio": "landscape",
             "width": "custom",
             "custom_width": 70,
             "width_mobile": "custom",
