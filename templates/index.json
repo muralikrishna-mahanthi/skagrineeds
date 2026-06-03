@@ -315,6 +315,9 @@
       "block_order": [
         "button_NWFH8r"
       ],
+      "custom_css": [
+        ".hero{margin-top: 40px; margin-bottom: 40px}"
+      ],
       "name": "t:names.hero",
       "settings": {
         "media_type_1": "image",
