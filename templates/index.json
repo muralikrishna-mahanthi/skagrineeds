@@ -316,7 +316,7 @@
         "button_NWFH8r"
       ],
       "custom_css": [
-        ".hero{margin-top: 40px; margin-bottom: 40px}"
+        ".hero {margin-top: 55px; margin-bottom: 55px;}"
       ],
       "name": "t:names.hero",
       "settings": {
