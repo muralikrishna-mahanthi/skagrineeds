@@ -286,101 +286,66 @@
         "padding-block-end": 100
       }
     },
-    "aboutsk_YrrpKJ": {
-      "type": "aboutsk",
+    "hero_ThYqaE": {
+      "type": "hero",
       "blocks": {
-        "metric_block_TPPMTB": {
-          "type": "metric_block",
+        "button_NWFH8r": {
+          "type": "button",
+          "name": "t:names.button",
           "settings": {
-            "value_text": "100+",
-            "label_text": "Products",
-            "default_icon": "products"
-          }
-        },
-        "metric_block_gJpibW": {
-          "type": "metric_block",
-          "settings": {
-            "value_text": "5000+",
-            "label_text": "Happy Farmers",
-            "default_icon": "farmers"
-          }
-        },
-        "metric_block_3gKyEL": {
-          "type": "metric_block",
-          "settings": {
-            "value_text": "100+",
-            "label_text": "Distributors",
-            "default_icon": "distributors"
-          }
-        },
-        "metric_block_BFAGtr": {
-          "type": "metric_block",
-          "settings": {
-            "value_text": "10+",
-            "label_text": "States Presence",
-            "default_icon": "states"
-          }
+            "label": "Shop now",
+            "link": "shopify://collections/all",
+            "open_in_new_tab": false,
+            "style_class": "button",
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "fit-content",
+            "custom_width_mobile": 100,
+            "use_custom_typography": false,
+            "custom_font_family": "Inter",
+            "custom_font_size": 16,
+            "custom_font_weight": "400",
+            "custom_font_color": "#000000",
+            "custom_letter_spacing": 0,
+            "custom_word_spacing": 0
+          },
+          "blocks": {}
         }
       },
       "block_order": [
-        "metric_block_TPPMTB",
-        "metric_block_gJpibW",
-        "metric_block_3gKyEL",
-        "metric_block_BFAGtr"
+        "button_NWFH8r"
       ],
-      "name": "About SK Agrineeds",
+      "name": "t:names.hero",
       "settings": {
-        "color_scheme": "",
-        "use_theme_fonts": true,
-        "show_decorations": true,
-        "section_min_height": 700,
-        "section_min_height_mobile": 500,
-        "padding_block_start": 60,
-        "padding_block_end": 60,
+        "media_type_1": "image",
         "image_1": "shopify://shop_images/chatgpt-image-latest-high-fidelity_20251216__a_generate_this_image__1.png",
-        "image_3": "shopify://shop_images/SK-3.webp",
-        "subheading_text": "ABOUT US",
-        "subheading_font": "assistant_n4",
-        "subheading_custom_font": "",
-        "subheading_size": 14,
-        "subheading_weight": "700",
-        "subheading_color": "#4c9a2a",
-        "heading_text": "Innovating for Better Nutrition. <strong>Empowering Farmers</strong>",
-        "heading_font": "assistant_n4",
-        "heading_custom_font": "",
-        "heading_size": 36,
-        "heading_weight": "700",
-        "heading_color": "#121212",
-        "heading_highlight_color": "#007a33",
-        "description_text": "<p>SK Agrineeds is committed to delivering high quality crop nutrition solutions. Our Micronutrients, Bio Stimulants, Water Soluble Fertilizers and Mixed Fertilizers are scientifically formulated to improve crop health, yield and quality.</p>",
-        "description_font": "assistant_n4",
-        "description_custom_font": "",
-        "description_size": 16,
-        "description_weight": "400",
-        "description_color": "#555555",
-        "blocks_font": "assistant_n4",
-        "blocks_custom_font": "",
-        "blocks_value_size": 24,
-        "blocks_value_weight": "700",
-        "blocks_value_color": "#121212",
-        "blocks_label_size": 13,
-        "blocks_label_weight": "500",
-        "blocks_label_color": "#666666",
-        "blocks_bg_color": "#f9fbf6",
-        "blocks_border_color": "#edf5e6",
-        "button_label": "About Us",
-        "button_link": "",
-        "button_font": "assistant_n4",
-        "button_custom_font": "",
-        "button_size": 14,
-        "button_weight": "700",
-        "button_color": "#ffffff",
-        "button_bg_color": "#6fb236",
-        "button_hover_color": "#ffffff",
-        "button_hover_bg_color": "#5a9e24",
-        "button_border_color": "rgba(0,0,0,0)",
-        "button_border_width": 0,
-        "button_radius": 30
+        "media_type_2": "image",
+        "stack_media_on_mobile": false,
+        "custom_mobile_media": false,
+        "media_type_1_mobile": "image",
+        "media_type_2_mobile": "image",
+        "link": "",
+        "open_in_new_tab": false,
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 16,
+        "section_width": "page-width",
+        "section_height": "large",
+        "section_height_custom": 50,
+        "color_scheme": "scheme-5",
+        "toggle_overlay": true,
+        "overlay_color": "#00000026",
+        "overlay_style": "gradient",
+        "gradient_direction": "to top",
+        "blurred_reflection": false,
+        "reflection_opacity": 75,
+        "padding-block-start": 40,
+        "padding-block-end": 40
       }
     },
     "collection_list_Hnwe9L": {
@@ -761,7 +726,7 @@
   },
   "order": [
     "hero_p9CmMG",
-    "aboutsk_YrrpKJ",
+    "hero_ThYqaE",
     "collection_list_Hnwe9L",
     "section_GGb79f",
     "section_adBx3G"
