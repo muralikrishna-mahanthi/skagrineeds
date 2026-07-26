@@ -161,6 +161,7 @@
                 "text_bGwxqi": {
                   "type": "text",
                   "name": "t:names.text",
+                  "disabled": true,
                   "settings": {
                     "text": "<p>High quality Micronutrients, Bio stimulants and Water Soluble Fertilizers for Healthy Crops and Higher Productivity.</p>",
                     "width": "fit-content",
