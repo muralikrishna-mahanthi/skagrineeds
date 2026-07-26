@@ -79,7 +79,7 @@
                 "custom_font_family": "Inter",
                 "custom_font_size": 52,
                 "custom_font_weight": "900",
-                "custom_font_color": "#1a1a1a",
+                "custom_font_color": "#FFFFFF",
                 "custom_letter_spacing": 1,
                 "custom_word_spacing": 4
               },
@@ -112,7 +112,7 @@
                 "custom_font_family": "inter",
                 "custom_font_size": 52,
                 "custom_font_weight": "400",
-                "custom_font_color": "#008d00",
+                "custom_font_color": "#3FBC3F",
                 "custom_letter_spacing": 1,
                 "custom_word_spacing": 4
               },
@@ -145,7 +145,7 @@
                 "custom_font_family": "var(--font-body--family)",
                 "custom_font_size": 19,
                 "custom_font_weight": "400",
-                "custom_font_color": "#000000",
+                "custom_font_color": "#FFFFFF",
                 "custom_letter_spacing": 0.5,
                 "custom_word_spacing": 0
               },
@@ -255,8 +255,9 @@
       ],
       "name": "t:names.hero",
       "settings": {
-        "media_type_1": "image",
+        "media_type_1": "video",
         "image_1": "shopify://shop_images/Max_a_generate_this_image.png",
+        "video_1": "shopify://files/videos/69b06c797bdd8635153702e5_69c7997fa8abb6bce5f6c173_0 Farm Field 1920X1080_mp4.mp4",
         "media_type_2": "image",
         "stack_media_on_mobile": false,
         "custom_mobile_media": true,
