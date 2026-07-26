@@ -404,7 +404,7 @@
                         "link": "",
                         "open_in_new_tab": false,
                         "placeholder": "",
-                        "padding-block-start": 0,
+                        "padding-block-start": 12,
                         "padding-block-end": 20,
                         "padding-inline-start": 8,
                         "padding-inline-end": 8
