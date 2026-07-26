@@ -1297,7 +1297,7 @@ button.shopify-payment-button__button--unbranded {
 }
 
 .button {
-  font-family: var(--button-font-family-primary);
+  font-family: var("Instrument Sans",sans-serif);
   font-weight: 600;
   text-transform: var(--button-text-case-primary);
   border-radius: var(--style-border-radius-buttons-primary);
@@ -1308,7 +1308,7 @@ button.shopify-payment-button__button--unbranded {
 }
 
 .button-secondary {
-  font-family: var(--button-font-family-secondary);
+  font-family: var("Instrument Sans",sans-serif);
   text-transform: var(--button-text-case-secondary);
   border-radius: var(--style-border-radius-buttons-secondary);
 }
