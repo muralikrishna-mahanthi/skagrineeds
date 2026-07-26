@@ -116,7 +116,7 @@
                     "padding-inline-start": 0,
                     "padding-inline-end": 0,
                     "use_custom_typography": true,
-                    "custom_font_family": "Inter",
+                    "custom_font_family": "Instrument Sans , sans-serif",
                     "custom_font_size": 52,
                     "custom_font_weight": "900",
                     "custom_font_color": "#FFFFFF",
