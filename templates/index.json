@@ -86,7 +86,7 @@
                 "link": "",
                 "open_in_new_tab": false,
                 "placeholder": "",
-                "padding-block-start": 0,
+                "padding-block-start": 42,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0
@@ -96,7 +96,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<p>ADVANCED NUTRITION</p>",
+                    "text": "<p>Advanced Nutrition</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -120,8 +120,8 @@
                     "custom_font_size": 52,
                     "custom_font_weight": "900",
                     "custom_font_color": "#FFFFFF",
-                    "custom_letter_spacing": 1,
-                    "custom_word_spacing": 4
+                    "custom_letter_spacing": -0.5,
+                    "custom_word_spacing": 2
                   },
                   "blocks": {}
                 },
@@ -129,7 +129,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<p>MAXIMUM YIELD</p>",
+                    "text": "<p>Maximum Yield</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -151,10 +151,10 @@
                     "use_custom_typography": true,
                     "custom_font_family": "Instrument Sans , sans-serif",
                     "custom_font_size": 52,
-                    "custom_font_weight": "500",
+                    "custom_font_weight": "900",
                     "custom_font_color": "#3FBC3F",
-                    "custom_letter_spacing": 1,
-                    "custom_word_spacing": 4
+                    "custom_letter_spacing": -0.5,
+                    "custom_word_spacing": 2
                   },
                   "blocks": {}
                 },
