@@ -261,6 +261,7 @@
         "stack_media_on_mobile": false,
         "custom_mobile_media": true,
         "media_type_1_mobile": "image",
+        "image_1_mobile": "shopify://shop_images/69ba517389c4b277b6bb6c4d_About_V1_Left_Image.webp",
         "media_type_2_mobile": "image",
         "link": "",
         "open_in_new_tab": false,
