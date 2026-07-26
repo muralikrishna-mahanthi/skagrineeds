@@ -416,7 +416,7 @@
                           "settings": {
                             "source": "uploaded",
                             "video": "shopify://files/videos/69b06c797bdd8635153702e5_69c7997fa8abb6bce5f6c173_0 Farm Field 1920X1080_mp4.mp4",
-                            "video_autoplay": false,
+                            "video_autoplay": true,
                             "video_loop": true,
                             "alt": "",
                             "custom_width": 100,
