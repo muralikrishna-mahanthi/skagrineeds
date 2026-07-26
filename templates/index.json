@@ -118,7 +118,7 @@
                     "use_custom_typography": true,
                     "custom_font_family": "Instrument Sans , sans-serif",
                     "custom_font_size": 52,
-                    "custom_font_weight": "900",
+                    "custom_font_weight": "600",
                     "custom_font_color": "#FFFFFF",
                     "custom_letter_spacing": -0.5,
                     "custom_word_spacing": 2
@@ -151,8 +151,8 @@
                     "use_custom_typography": true,
                     "custom_font_family": "Instrument Sans , sans-serif",
                     "custom_font_size": 52,
-                    "custom_font_weight": "900",
-                    "custom_font_color": "#3FBC3F",
+                    "custom_font_weight": "600",
+                    "custom_font_color": "#FFFFFF",
                     "custom_letter_spacing": -0.5,
                     "custom_word_spacing": 2
                   },
