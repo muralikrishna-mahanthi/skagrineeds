@@ -68,8 +68,8 @@
                 "custom_width": 100,
                 "width_mobile": "fill",
                 "custom_width_mobile": 100,
-                "height": "fit",
-                "custom_height": 90,
+                "height": "custom",
+                "custom_height": 100,
                 "inherit_color_scheme": true,
                 "color_scheme": "",
                 "background_media": "none",
@@ -87,7 +87,7 @@
                 "open_in_new_tab": false,
                 "placeholder": "",
                 "padding-block-start": 0,
-                "padding-block-end": 100,
+                "padding-block-end": 0,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0
               },
@@ -323,7 +323,7 @@
                 "link": "",
                 "open_in_new_tab": false,
                 "placeholder": "",
-                "padding-block-start": 40,
+                "padding-block-start": 80,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0
