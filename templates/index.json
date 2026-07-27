@@ -657,7 +657,7 @@
                 "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "flex-start",
                 "vertical_alignment_flex_direction_column": "center",
-                "gap": 12,
+                "gap": 4,
                 "width": "fill",
                 "custom_width": 100,
                 "width_mobile": "fill",
@@ -691,7 +691,8 @@
                   "name": "t:names.icon",
                   "settings": {
                     "icon": "star",
-                    "width": 24,
+                    "image_upload": "shopify://shop_images/create-only-a-dot-of-color-a4c34f-that-should-be-in-circle-and-no-other-background-color-or-that-only-dot-of-screen-fill-fit.png",
+                    "width": 28,
                     "link": "",
                     "open_in_new_tab": false
                   },
@@ -2070,7 +2071,7 @@
                   "settings": {
                     "icon": "price_tag",
                     "image_upload": "shopify://shop_images/create-only-a-dot-of-color-a4c34f-that-should-be-in-circle-and-no-other-background-color-or-that-only-dot-of-screen-fill-fit.png",
-                    "width": 30,
+                    "width": 28,
                     "link": "",
                     "open_in_new_tab": false
                   },
