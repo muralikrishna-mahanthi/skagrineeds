@@ -1183,7 +1183,7 @@
                         "link": "",
                         "image_ratio": "landscape",
                         "width": "custom",
-                        "custom_width": 35,
+                        "custom_width": 28,
                         "width_mobile": "fill",
                         "custom_width_mobile": 100,
                         "height": "fit",
