@@ -1981,71 +1981,6 @@
         "padding-block-end": 90
       }
     },
-    "hero_ThYqaE": {
-      "type": "hero",
-      "blocks": {
-        "button_NWFH8r": {
-          "type": "button",
-          "name": "t:names.button",
-          "settings": {
-            "label": "About Us",
-            "link": "shopify://pages/about-us",
-            "open_in_new_tab": false,
-            "style_class": "button",
-            "width": "custom",
-            "custom_width": 14,
-            "width_mobile": "fit-content",
-            "custom_width_mobile": 100,
-            "use_custom_typography": false,
-            "custom_font_family": "Inter",
-            "custom_font_size": 16,
-            "custom_font_weight": "400",
-            "custom_font_color": "#000000",
-            "custom_letter_spacing": 0,
-            "custom_word_spacing": 0
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "button_NWFH8r"
-      ],
-      "custom_css": [
-        ".hero {margin-top: 55px; margin-bottom: 55px;}"
-      ],
-      "name": "t:names.hero",
-      "settings": {
-        "media_type_1": "image",
-        "image_1": "shopify://shop_images/Max_a_generate_this_image__15.png",
-        "media_type_2": "image",
-        "stack_media_on_mobile": false,
-        "custom_mobile_media": false,
-        "media_type_1_mobile": "image",
-        "media_type_2_mobile": "image",
-        "link": "",
-        "open_in_new_tab": false,
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "center",
-        "vertical_alignment_flex_direction_column": "flex-end",
-        "gap": 16,
-        "section_width": "page-width",
-        "section_height": "medium",
-        "section_height_custom": 51,
-        "color_scheme": "scheme-5",
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "gradient",
-        "gradient_direction": "to top",
-        "blurred_reflection": false,
-        "reflection_opacity": 11,
-        "padding-block-start": 100,
-        "padding-block-end": 32
-      }
-    },
     "collection_list_Hnwe9L": {
       "type": "collection-list",
       "blocks": {
@@ -2425,7 +2360,6 @@
   "order": [
     "hero_p9CmMG",
     "section_i4Xxya",
-    "hero_ThYqaE",
     "collection_list_Hnwe9L",
     "section_GGb79f",
     "section_adBx3G"
