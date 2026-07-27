@@ -954,7 +954,7 @@
                     "link": "",
                     "image_ratio": "portrait",
                     "width": "custom",
-                    "custom_width": 70,
+                    "custom_width": 60,
                     "width_mobile": "fill",
                     "custom_width_mobile": 100,
                     "height": "fit",
