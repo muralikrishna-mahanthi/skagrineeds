@@ -1144,7 +1144,7 @@
                           "settings": {
                             "desktop_width_percent": 100,
                             "gap": 15,
-                            "padding": 30,
+                            "padding": 10,
                             "corner_radius": 50,
                             "word_1": "Environmental-First",
                             "word_1_bg_color": "#F5F5F5",
