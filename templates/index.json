@@ -1338,7 +1338,7 @@
                                 "group_6fJq9x"
                               ]
                             },
-                            "group_U9MmLw": {
+                            "group_dDmcRH": {
                               "type": "group",
                               "name": "t:names.group",
                               "settings": {
@@ -1356,7 +1356,7 @@
                                 "custom_width_mobile": 100,
                                 "height": "fit",
                                 "custom_height": 100,
-                                "inherit_color_scheme": false,
+                                "inherit_color_scheme": true,
                                 "color_scheme": "",
                                 "background_media": "none",
                                 "video_position": "cover",
@@ -1378,7 +1378,7 @@
                                 "padding-inline-end": 20
                               },
                               "blocks": {
-                                "icon_kkTa3p": {
+                                "icon_yqLMTe": {
                                   "type": "icon",
                                   "name": "t:names.icon",
                                   "settings": {
@@ -1390,7 +1390,7 @@
                                   },
                                   "blocks": {}
                                 },
-                                "group_epThba": {
+                                "group_JxayCx": {
                                   "type": "group",
                                   "name": "t:names.group",
                                   "settings": {
@@ -1430,11 +1430,11 @@
                                     "padding-inline-end": 0
                                   },
                                   "blocks": {
-                                    "text_8kQTyH": {
+                                    "text_Qnwiy6": {
                                       "type": "text",
                                       "name": "t:names.text",
                                       "settings": {
-                                        "text": "<p><strong>100+</strong></p>",
+                                        "text": "<p><strong>5000+</strong></p>",
                                         "width": "fit-content",
                                         "max_width": "normal",
                                         "alignment": "left",
@@ -1463,11 +1463,11 @@
                                       },
                                       "blocks": {}
                                     },
-                                    "text_kaePR9": {
+                                    "text_wEtLEz": {
                                       "type": "text",
                                       "name": "t:names.text",
                                       "settings": {
-                                        "text": "<p>Distributors</p>",
+                                        "text": "<p>Happy Customers</p>",
                                         "width": "fit-content",
                                         "max_width": "normal",
                                         "alignment": "left",
@@ -1498,20 +1498,20 @@
                                     }
                                   },
                                   "block_order": [
-                                    "text_8kQTyH",
-                                    "text_kaePR9"
+                                    "text_Qnwiy6",
+                                    "text_wEtLEz"
                                   ]
                                 }
                               },
                               "block_order": [
-                                "icon_kkTa3p",
-                                "group_epThba"
+                                "icon_yqLMTe",
+                                "group_JxayCx"
                               ]
                             }
                           },
                           "block_order": [
                             "group_B7GNba",
-                            "group_U9MmLw"
+                            "group_dDmcRH"
                           ]
                         },
                         "group_QEdDaJ": {
@@ -1554,7 +1554,7 @@
                             "padding-inline-end": 0
                           },
                           "blocks": {
-                            "group_dXFAF6": {
+                            "group_dBxU63": {
                               "type": "group",
                               "name": "t:names.group",
                               "settings": {
@@ -1572,7 +1572,7 @@
                                 "custom_width_mobile": 100,
                                 "height": "fit",
                                 "custom_height": 100,
-                                "inherit_color_scheme": true,
+                                "inherit_color_scheme": false,
                                 "color_scheme": "",
                                 "background_media": "none",
                                 "video_position": "cover",
@@ -1594,7 +1594,7 @@
                                 "padding-inline-end": 20
                               },
                               "blocks": {
-                                "icon_hzKAJj": {
+                                "icon_biL3C8": {
                                   "type": "icon",
                                   "name": "t:names.icon",
                                   "settings": {
@@ -1606,7 +1606,7 @@
                                   },
                                   "blocks": {}
                                 },
-                                "group_DC4tVc": {
+                                "group_N8QnEd": {
                                   "type": "group",
                                   "name": "t:names.group",
                                   "settings": {
@@ -1646,11 +1646,11 @@
                                     "padding-inline-end": 0
                                   },
                                   "blocks": {
-                                    "text_rGW8Xk": {
+                                    "text_i3NHGC": {
                                       "type": "text",
                                       "name": "t:names.text",
                                       "settings": {
-                                        "text": "<p><strong>5000+</strong></p>",
+                                        "text": "<p><strong>100+</strong></p>",
                                         "width": "fit-content",
                                         "max_width": "normal",
                                         "alignment": "left",
@@ -1679,11 +1679,11 @@
                                       },
                                       "blocks": {}
                                     },
-                                    "text_Xe6FX6": {
+                                    "text_7Nhw7J": {
                                       "type": "text",
                                       "name": "t:names.text",
                                       "settings": {
-                                        "text": "<p>Happy Customers</p>",
+                                        "text": "<p>Distributors</p>",
                                         "width": "fit-content",
                                         "max_width": "normal",
                                         "alignment": "left",
@@ -1714,14 +1714,14 @@
                                     }
                                   },
                                   "block_order": [
-                                    "text_rGW8Xk",
-                                    "text_Xe6FX6"
+                                    "text_i3NHGC",
+                                    "text_7Nhw7J"
                                   ]
                                 }
                               },
                               "block_order": [
-                                "icon_hzKAJj",
-                                "group_DC4tVc"
+                                "icon_biL3C8",
+                                "group_N8QnEd"
                               ]
                             },
                             "group_7Ac6fV": {
@@ -1896,7 +1896,7 @@
                             }
                           },
                           "block_order": [
-                            "group_dXFAF6",
+                            "group_dBxU63",
                             "group_7Ac6fV"
                           ]
                         }
