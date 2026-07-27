@@ -2081,7 +2081,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Our Products</p>",
+                    "text": "<p>Our Collections</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
