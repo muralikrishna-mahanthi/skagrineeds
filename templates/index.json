@@ -1019,7 +1019,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<h3>We integrate smart farming solutions with data-driven insights to help farmers optimize land use, water management, and resources.</h3>",
+                    "text": "<h2>We integrate smart farming solutions with data-driven insights to help farmers optimize land use, water management, and resources.</h2>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
