@@ -1143,7 +1143,7 @@
                           "type": "ai_gen_block_d16809f",
                           "settings": {
                             "desktop_width_percent": 100,
-                            "gap": 15,
+                            "gap": 10,
                             "padding": 10,
                             "corner_radius": 50,
                             "word_1": "Environmental-First",
