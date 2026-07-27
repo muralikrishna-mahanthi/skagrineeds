@@ -2120,7 +2120,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p><strong>Innovative solutions designed for modern farming grow smarter today</strong></p>",
+                "text": "<p><strong>Solutions designed for modern farming grow smarter today</strong></p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
