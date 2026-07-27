@@ -1762,7 +1762,7 @@
                                 "padding-block-start": 6,
                                 "padding-block-end": 6,
                                 "padding-inline-start": 20,
-                                "padding-inline-end": 0
+                                "padding-inline-end": 12
                               },
                               "blocks": {
                                 "icon_PpkAtx": {
