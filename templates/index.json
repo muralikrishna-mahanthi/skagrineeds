@@ -1054,7 +1054,7 @@
                   "settings": {
                     "content_direction": "row",
                     "vertical_on_mobile": true,
-                    "horizontal_alignment": "flex-start",
+                    "horizontal_alignment": "space-between",
                     "vertical_alignment": "center",
                     "align_baseline": false,
                     "horizontal_alignment_flex_direction_column": "flex-start",
@@ -1181,7 +1181,7 @@
                       "settings": {
                         "image": "shopify://shop_images/69ba517389c4b277b6bb6c4d_About_V1_Left_Image.webp",
                         "link": "",
-                        "image_ratio": "adapt",
+                        "image_ratio": "landscape",
                         "width": "fill",
                         "custom_width": 100,
                         "width_mobile": "fill",
