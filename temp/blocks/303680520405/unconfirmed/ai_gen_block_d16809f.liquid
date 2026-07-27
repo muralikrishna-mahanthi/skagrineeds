@@ -1,6 +1,298 @@
+{% doc %}
+  @prompt
+    create a four words with background colors settings with font style settings, font family settings, and size of that background settings, corner radius settings and make them as 2 words per row and 2 rows like wrap in mobile view like a single word per column and 4 words down by down and desktop view 2 words per row and give padding settings for them
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-word-grid-{{ ai_gen_id }} {
+    display: block;
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+  }
+
+  .ai-word-grid-container-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: {{ block.settings.gap }}px;
+  }
+
+  .ai-word-item-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: {{ block.settings.padding }}px;
+    border-radius: {{ block.settings.corner_radius }}px;
+    text-align: center;
+    word-wrap: break-word;
+  }
+
+  .ai-word-item-{{ ai_gen_id }}-1 {
+    background-color: {{ block.settings.word_1_bg_color }};
+    color: {{ block.settings.word_1_text_color }};
+    font-family: {{ block.settings.word_1_font.family }}, {{ block.settings.word_1_font.fallback_families }};
+    font-weight: {{ block.settings.word_1_font.weight }};
+    font-style: {{ block.settings.word_1_font.style }};
+    font-size: {{ block.settings.word_1_font_size }}px;
+  }
+
+  .ai-word-item-{{ ai_gen_id }}-2 {
+    background-color: {{ block.settings.word_2_bg_color }};
+    color: {{ block.settings.word_2_text_color }};
+    font-family: {{ block.settings.word_2_font.family }}, {{ block.settings.word_2_font.fallback_families }};
+    font-weight: {{ block.settings.word_2_font.weight }};
+    font-style: {{ block.settings.word_2_font.style }};
+    font-size: {{ block.settings.word_2_font_size }}px;
+  }
+
+  .ai-word-item-{{ ai_gen_id }}-3 {
+    background-color: {{ block.settings.word_3_bg_color }};
+    color: {{ block.settings.word_3_text_color }};
+    font-family: {{ block.settings.word_3_font.family }}, {{ block.settings.word_3_font.fallback_families }};
+    font-weight: {{ block.settings.word_3_font.weight }};
+    font-style: {{ block.settings.word_3_font.style }};
+    font-size: {{ block.settings.word_3_font_size }}px;
+  }
+
+  .ai-word-item-{{ ai_gen_id }}-4 {
+    background-color: {{ block.settings.word_4_bg_color }};
+    color: {{ block.settings.word_4_text_color }};
+    font-family: {{ block.settings.word_4_font.family }}, {{ block.settings.word_4_font.fallback_families }};
+    font-weight: {{ block.settings.word_4_font.weight }};
+    font-style: {{ block.settings.word_4_font.style }};
+    font-size: {{ block.settings.word_4_font_size }}px;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-word-grid-container-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-word-grid-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-word-grid-container-{{ ai_gen_id }}">
+    <div class="ai-word-item-{{ ai_gen_id }} ai-word-item-{{ ai_gen_id }}-1">
+      {{ block.settings.word_1 }}
+    </div>
+    <div class="ai-word-item-{{ ai_gen_id }} ai-word-item-{{ ai_gen_id }}-2">
+      {{ block.settings.word_2 }}
+    </div>
+    <div class="ai-word-item-{{ ai_gen_id }} ai-word-item-{{ ai_gen_id }}-3">
+      {{ block.settings.word_3 }}
+    </div>
+    <div class="ai-word-item-{{ ai_gen_id }} ai-word-item-{{ ai_gen_id }}-4">
+      {{ block.settings.word_4 }}
+    </div>
+  </div>
+</div>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Word grid",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "Gap between words",
+      "min": 0,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "default": 15
+    },
+    {
+      "type": "range",
+      "id": "padding",
+      "label": "Padding",
+      "min": 10,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "corner_radius",
+      "label": "Corner radius",
+      "min": 0,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "default": 10
+    },
+    {
+      "type": "header",
+      "content": "Word 1"
+    },
+    {
+      "type": "text",
+      "id": "word_1",
+      "label": "Text",
+      "default": "Quality"
+    },
+    {
+      "type": "color",
+      "id": "word_1_bg_color",
+      "label": "Background",
+      "default": "#000f9f"
+    },
+    {
+      "type": "color",
+      "id": "word_1_text_color",
+      "label": "Text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "font_picker",
+      "id": "word_1_font",
+      "label": "Font",
+      "default": "work_sans_n7"
+    },
+    {
+      "type": "range",
+      "id": "word_1_font_size",
+      "label": "Font size",
+      "min": 12,
+      "max": 72,
+      "step": 2,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "header",
+      "content": "Word 2"
+    },
+    {
+      "type": "text",
+      "id": "word_2",
+      "label": "Text",
+      "default": "Innovation"
+    },
+    {
+      "type": "color",
+      "id": "word_2_bg_color",
+      "label": "Background",
+      "default": "#3d3f42"
+    },
+    {
+      "type": "color",
+      "id": "word_2_text_color",
+      "label": "Text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "font_picker",
+      "id": "word_2_font",
+      "label": "Font",
+      "default": "work_sans_n7"
+    },
+    {
+      "type": "range",
+      "id": "word_2_font_size",
+      "label": "Font size",
+      "min": 12,
+      "max": 72,
+      "step": 2,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "header",
+      "content": "Word 3"
+    },
+    {
+      "type": "text",
+      "id": "word_3",
+      "label": "Text",
+      "default": "Excellence"
+    },
+    {
+      "type": "color",
+      "id": "word_3_bg_color",
+      "label": "Background",
+      "default": "#8a8d91"
+    },
+    {
+      "type": "color",
+      "id": "word_3_text_color",
+      "label": "Text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "font_picker",
+      "id": "word_3_font",
+      "label": "Font",
+      "default": "work_sans_n7"
+    },
+    {
+      "type": "range",
+      "id": "word_3_font_size",
+      "label": "Font size",
+      "min": 12,
+      "max": 72,
+      "step": 2,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "header",
+      "content": "Word 4"
+    },
+    {
+      "type": "text",
+      "id": "word_4",
+      "label": "Text",
+      "default": "Trust"
+    },
+    {
+      "type": "color",
+      "id": "word_4_bg_color",
+      "label": "Background",
+      "default": "#b5b8a3"
+    },
+    {
+      "type": "color",
+      "id": "word_4_text_color",
+      "label": "Text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "font_picker",
+      "id": "word_4_font",
+      "label": "Font",
+      "default": "work_sans_n7"
+    },
+    {
+      "type": "range",
+      "id": "word_4_font_size",
+      "label": "Font size",
+      "min": 12,
+      "max": 72,
+      "step": 2,
+      "unit": "px",
+      "default": 24
+    }
+  ],
+  "presets": [
+    {
+      "name": "Word grid"
+    }
+  ],
+  "tag": null
+}
 {% endschema %}
