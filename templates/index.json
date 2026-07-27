@@ -2020,7 +2020,7 @@
             "open_in_new_tab": false,
             "placeholder": "",
             "padding-block-start": 0,
-            "padding-block-end": 0,
+            "padding-block-end": 36,
             "padding-inline-start": 0,
             "padding-inline-end": 0
           },
@@ -2226,11 +2226,14 @@
       "name": "t:names.collections_grid",
       "settings": {
         "collection_list": [
-          "bio-stimulant"
+          "bio-stimulant",
+          "micronutrients",
+          "mixed-fertilizers",
+          "water-soluble-fertilizers"
         ],
         "layout_type": "grid",
         "carousel_on_mobile": false,
-        "columns": 3,
+        "columns": 4,
         "mobile_columns": "2",
         "mobile_card_size": "60cqw",
         "columns_gap": 8,
