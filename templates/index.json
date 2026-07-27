@@ -136,7 +136,7 @@
                       "type": "text",
                       "name": "t:names.heading",
                       "settings": {
-                        "text": "<p>Maximizing Yield</p>",
+                        "text": "<p>Maximizing Yield for</p>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -169,7 +169,7 @@
                       "type": "text",
                       "name": "t:names.heading",
                       "settings": {
-                        "text": "<p>for Tomorrow</p>",
+                        "text": "<p>Tomorrow</p>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
