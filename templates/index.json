@@ -2471,7 +2471,7 @@
                     "padding-inline-end": 0,
                     "use_custom_typography": true,
                     "custom_font_family": "instrument sans",
-                    "custom_font_size": 40,
+                    "custom_font_size": 44,
                     "custom_font_weight": "400",
                     "custom_font_color": "#000000",
                     "custom_letter_spacing": 0,
@@ -2504,7 +2504,7 @@
                     "padding-inline-end": 0,
                     "use_custom_typography": true,
                     "custom_font_family": "instrument sans",
-                    "custom_font_size": 20,
+                    "custom_font_size": 16,
                     "custom_font_weight": "400",
                     "custom_font_color": "#000000",
                     "custom_letter_spacing": 0,
@@ -2578,8 +2578,8 @@
         "overlay_color": "#00000026",
         "overlay_style": "solid",
         "gradient_direction": "to top",
-        "padding-block-start": 0,
-        "padding-block-end": 0
+        "padding-block-start": 50,
+        "padding-block-end": 50
       }
     },
     "section_adBx3G": {
