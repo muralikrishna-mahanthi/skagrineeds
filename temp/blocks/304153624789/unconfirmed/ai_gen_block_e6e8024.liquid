@@ -1,6 +1,281 @@
+{% doc %}
+  @prompt
+    create a text that and give the settings that text should flow right side or left side and give that text font family from google fonts settings, font size settings, font color settings, font color transparent settings and in that transparent settings we can keep an image and that name should be of image text , and speed settings of that text to move in a loop continuously so that there should be setting for gap in that loop flow of that text and give mobile and desktop view settings different and give top and bottom margin settings for this block
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  @import url('https://fonts.googleapis.com/css2?family={{ block.settings.font_family | replace: ' ', '+' }}&display=swap');
+
+  .ai-scrolling-text-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-top: {{ block.settings.margin_top_desktop }}px;
+    margin-bottom: {{ block.settings.margin_bottom_desktop }}px;
+  }
+
+  .ai-scrolling-text-wrapper-{{ ai_gen_id }} {
+    display: flex;
+    width: fit-content;
+    gap: {{ block.settings.text_gap }}px;
+    {% if block.settings.direction == 'left' %}
+      animation: ai-scroll-left-{{ ai_gen_id }} {{ block.settings.speed }}s linear infinite;
+    {% else %}
+      animation: ai-scroll-right-{{ ai_gen_id }} {{ block.settings.speed }}s linear infinite;
+    {% endif %}
+  }
+
+  .ai-scrolling-text-item-{{ ai_gen_id }} {
+    white-space: nowrap;
+    font-family: '{{ block.settings.font_family }}', sans-serif;
+    font-size: {{ block.settings.font_size_desktop }}px;
+    color: {{ block.settings.font_color }};
+    opacity: {{ block.settings.font_opacity | divided_by: 100.0 }};
+    position: relative;
+    {% if block.settings.background_image %}
+      background-image: url('{{ block.settings.background_image | image_url: width: 2000 }}');
+      background-size: cover;
+      background-position: center;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    {% endif %}
+  }
+
+  @keyframes ai-scroll-left-{{ ai_gen_id }} {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes ai-scroll-right-{{ ai_gen_id }} {
+    0% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-scrolling-text-{{ ai_gen_id }} {
+      margin-top: {{ block.settings.margin_top_mobile }}px;
+      margin-bottom: {{ block.settings.margin_bottom_mobile }}px;
+    }
+
+    .ai-scrolling-text-item-{{ ai_gen_id }} {
+      font-size: {{ block.settings.font_size_mobile }}px;
+    }
+  }
+{% endstyle %}
+
+<scrolling-text-{{ ai_gen_id }} class="ai-scrolling-text-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-scrolling-text-wrapper-{{ ai_gen_id }}">
+    {% for i in (1..20) %}
+      <div class="ai-scrolling-text-item-{{ ai_gen_id }}">
+        {{ block.settings.text }}
+      </div>
+    {% endfor %}
+  </div>
+</scrolling-text-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class ScrollingText{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+        this.wrapper = this.querySelector('.ai-scrolling-text-wrapper-{{ ai_gen_id }}');
+        this.adjustAnimation();
+      }
+
+      adjustAnimation() {
+        if (!this.wrapper) return;
+        
+        const firstItem = this.wrapper.querySelector('.ai-scrolling-text-item-{{ ai_gen_id }}');
+        if (!firstItem) return;
+
+        const itemWidth = firstItem.offsetWidth;
+        const gap = {{ block.settings.text_gap }};
+        const totalWidth = (itemWidth + gap) * 10;
+        
+        this.wrapper.style.width = totalWidth + 'px';
+      }
+    }
+
+    customElements.define('scrolling-text-{{ ai_gen_id }}', ScrollingText{{ ai_gen_id }});
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Scrolling text",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Text content"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Text",
+      "default": "Scrolling Text"
+    },
+    {
+      "type": "select",
+      "id": "direction",
+      "label": "Scroll direction",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "text",
+      "id": "font_family",
+      "label": "Google font family",
+      "default": "Roboto",
+      "info": "Enter a Google Fonts family name (e.g., Roboto, Open Sans, Montserrat)"
+    },
+    {
+      "type": "range",
+      "id": "font_size_desktop",
+      "label": "Desktop font size",
+      "min": 16,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "font_size_mobile",
+      "label": "Mobile font size",
+      "min": 16,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "color",
+      "id": "font_color",
+      "label": "Font color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "font_opacity",
+      "label": "Font opacity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "header",
+      "content": "Image text"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Image text",
+      "info": "Image will be clipped to text shape"
+    },
+    {
+      "type": "header",
+      "content": "Animation"
+    },
+    {
+      "type": "range",
+      "id": "speed",
+      "label": "Speed",
+      "min": 5,
+      "max": 100,
+      "step": 5,
+      "unit": "s",
+      "default": 20,
+      "info": "Lower value = faster speed"
+    },
+    {
+      "type": "range",
+      "id": "text_gap",
+      "label": "Gap between text",
+      "min": 20,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "default": 50
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "margin_top_desktop",
+      "label": "Desktop top margin",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom_desktop",
+      "label": "Desktop bottom margin",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "margin_top_mobile",
+      "label": "Mobile top margin",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 15
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom_mobile",
+      "label": "Mobile bottom margin",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 15
+    }
+  ],
+  "presets": [
+    {
+      "name": "Scrolling text"
+    }
+  ]
+}
 {% endschema %}
