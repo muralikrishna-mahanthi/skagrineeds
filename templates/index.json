@@ -1023,7 +1023,7 @@
                     "text_alignment": "left",
                     "text_color": "#000000",
                     "font_family": "instrument_sans_n4",
-                    "mobile_font_size": 26,
+                    "mobile_font_size": 20,
                     "mobile_font_weight": 400,
                     "mobile_letter_spacing": 0,
                     "mobile_word_spacing": 0,
