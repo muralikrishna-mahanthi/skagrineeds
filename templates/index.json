@@ -1049,7 +1049,7 @@
                     "use_custom_typography": true,
                     "custom_font_family": "instrument sans",
                     "custom_font_size": 48,
-                    "custom_mobile_font_size": 10,
+                    "custom_mobile_font_size": 40,
                     "custom_font_weight": "400",
                     "custom_font_color": "#000000",
                     "custom_letter_spacing": -0.5,
