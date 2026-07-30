@@ -721,7 +721,7 @@
                     "padding-block-end": 0,
                     "padding-inline-start": 0,
                     "padding-inline-end": 0,
-                    "use_custom_typography": true,
+                    "use_custom_typography": false,
                     "custom_font_family": "Instrument sans",
                     "custom_font_size": 20,
                     "custom_font_weight": "400",
