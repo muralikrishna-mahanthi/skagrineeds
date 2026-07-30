@@ -47,6 +47,7 @@
     "icon_stroke": "thin",
     "input_border_width": 1,
     "inputs_border_radius": 8,
+    "popover_color_scheme": "scheme-7",
     "popover_border_radius": 4,
     "popover_border": "none",
     "currency_code_enabled_product_pages": false,
@@ -298,7 +299,7 @@
       },
       "scheme-7": {
         "settings": {
-          "background": "#121212",
+          "background": "#1A1A1A",
           "foreground_heading": "#ffffff",
           "foreground": "#FFFFFF",
           "primary": "#000f9f",
