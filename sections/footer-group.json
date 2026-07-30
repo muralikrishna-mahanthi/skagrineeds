@@ -646,6 +646,61 @@
         "padding-block-end": 0
       }
     },
+    "17854117867c406733": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_e6e8024_nUaVqx": {
+          "type": "ai_gen_block_e6e8024",
+          "settings": {
+            "text": "SK AGRI NEEDS",
+            "direction": "left",
+            "font_family": "Instrument sans",
+            "font_size_desktop": 68,
+            "font_size_mobile": 32,
+            "font_color": "#FFFFFF",
+            "font_opacity": 100,
+            "background_image": "shopify://shop_images/69c33fa6274fd993581ba554_Soil_Image_compressed-p-2000.webp",
+            "speed": 70,
+            "text_gap": 50,
+            "margin_top_desktop": 20,
+            "margin_bottom_desktop": 20,
+            "margin_top_mobile": 15,
+            "margin_bottom_mobile": 15
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_e6e8024_nUaVqx"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "full-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "scheme-7",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
     "footer_utilities": {
       "type": "footer-utilities",
       "blocks": {
@@ -683,6 +738,7 @@
   },
   "order": [
     "section_QrrLxB",
+    "17854117867c406733",
     "footer_utilities"
   ]
 }
