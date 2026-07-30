@@ -666,7 +666,7 @@
         "ai_gen_block_e6e8024_nUaVqx": {
           "type": "ai_gen_block_e6e8024",
           "settings": {
-            "text": "SK AGRI NEEDS",
+            "text": "SK AGRI NEEDS .",
             "direction": "left",
             "font_family": "Instrument sans",
             "font_size_desktop": 68,
@@ -675,7 +675,7 @@
             "font_opacity": 100,
             "background_image": "shopify://shop_images/69c33fa6274fd993581ba554_Soil_Image_compressed-p-2000.webp",
             "speed": 70,
-            "text_gap": 50,
+            "text_gap": 30,
             "margin_top_desktop": 20,
             "margin_bottom_desktop": 20,
             "margin_top_mobile": 15,
