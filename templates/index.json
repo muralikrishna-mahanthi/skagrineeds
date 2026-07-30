@@ -1034,40 +1034,6 @@
                   },
                   "blocks": {}
                 },
-                "text_RTjg3A": {
-                  "type": "text",
-                  "name": "t:names.text",
-                  "disabled": true,
-                  "settings": {
-                    "text": "<h2>We integrate smart farming solutions with data-driven insights to help farmers optimize land use, water management, and resources.</h2>",
-                    "width": "fit-content",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "custom",
-                    "font": "var(--font-body--family)",
-                    "font_size": "3rem",
-                    "line_height": "tight",
-                    "letter_spacing": "tight",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "color": "var(--color-foreground)",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0,
-                    "use_custom_typography": true,
-                    "custom_font_family": "instrument sans",
-                    "custom_font_size": 48,
-                    "custom_font_weight": "400",
-                    "custom_font_color": "#000000",
-                    "custom_letter_spacing": -0.5,
-                    "custom_word_spacing": 0
-                  },
-                  "blocks": {}
-                },
                 "group_LAMtnn": {
                   "type": "group",
                   "name": "t:names.group",
@@ -1193,7 +1159,7 @@
                               "name": "t:names.group",
                               "settings": {
                                 "content_direction": "row",
-                                "vertical_on_mobile": true,
+                                "vertical_on_mobile": false,
                                 "horizontal_alignment": "flex-start",
                                 "vertical_alignment": "center",
                                 "align_baseline": false,
@@ -1202,8 +1168,8 @@
                                 "gap": 12,
                                 "width": "fit-content",
                                 "custom_width": 100,
-                                "width_mobile": "fit-content",
-                                "custom_width_mobile": 100,
+                                "width_mobile": "fill",
+                                "custom_width_mobile": 44,
                                 "height": "fit",
                                 "custom_height": 100,
                                 "inherit_color_scheme": true,
@@ -1245,7 +1211,7 @@
                                   "name": "t:names.group",
                                   "settings": {
                                     "content_direction": "column",
-                                    "vertical_on_mobile": true,
+                                    "vertical_on_mobile": false,
                                     "horizontal_alignment": "flex-start",
                                     "vertical_alignment": "center",
                                     "align_baseline": false,
@@ -1313,43 +1279,28 @@
                                       },
                                       "blocks": {}
                                     },
-                                    "text_YkXARG": {
-                                      "type": "text",
-                                      "name": "t:names.text",
+                                    "ai_gen_block_63ff7af_yB6EX3": {
+                                      "type": "ai_gen_block_63ff7af",
                                       "settings": {
-                                        "text": "<p>Products</p><p></p>",
-                                        "width": "fit-content",
-                                        "max_width": "normal",
-                                        "alignment": "left",
-                                        "type_preset": "custom",
-                                        "font": "var(--font-body--family)",
-                                        "font_size": "1.25rem",
-                                        "line_height": "tight",
-                                        "letter_spacing": "tight",
-                                        "case": "none",
-                                        "wrap": "pretty",
-                                        "color": "var(--color-foreground)",
-                                        "background": false,
-                                        "background_color": "#00000026",
-                                        "corner_radius": 0,
-                                        "padding-block-start": 0,
-                                        "padding-block-end": 0,
-                                        "padding-inline-start": 0,
-                                        "padding-inline-end": 0,
-                                        "use_custom_typography": false,
-                                        "custom_font_family": "Inter",
-                                        "custom_font_size": 16,
-                                        "custom_font_weight": "400",
-                                        "custom_font_color": "#000000",
-                                        "custom_letter_spacing": 0,
-                                        "custom_word_spacing": 0
+                                        "text_content": "Products",
+                                        "text_alignment": "left",
+                                        "text_color": "#000000",
+                                        "font_family": "instrument_sans_n4",
+                                        "mobile_font_size": 16,
+                                        "mobile_font_weight": 100,
+                                        "mobile_letter_spacing": 0,
+                                        "mobile_word_spacing": -1,
+                                        "desktop_font_size": 16,
+                                        "desktop_font_weight": 400,
+                                        "desktop_letter_spacing": 0,
+                                        "desktop_word_spacing": 0
                                       },
                                       "blocks": {}
                                     }
                                   },
                                   "block_order": [
                                     "text_89WFf6",
-                                    "text_YkXARG"
+                                    "ai_gen_block_63ff7af_yB6EX3"
                                   ]
                                 }
                               },
@@ -1363,7 +1314,7 @@
                               "name": "t:names.group",
                               "settings": {
                                 "content_direction": "row",
-                                "vertical_on_mobile": true,
+                                "vertical_on_mobile": false,
                                 "horizontal_alignment": "flex-start",
                                 "vertical_alignment": "center",
                                 "align_baseline": false,
@@ -1372,7 +1323,7 @@
                                 "gap": 12,
                                 "width": "fit-content",
                                 "custom_width": 100,
-                                "width_mobile": "fit-content",
+                                "width_mobile": "fill",
                                 "custom_width_mobile": 100,
                                 "height": "fit",
                                 "custom_height": 100,
@@ -1483,43 +1434,28 @@
                                       },
                                       "blocks": {}
                                     },
-                                    "text_wEtLEz": {
-                                      "type": "text",
-                                      "name": "t:names.text",
+                                    "ai_gen_block_63ff7af_F8kDG8": {
+                                      "type": "ai_gen_block_63ff7af",
                                       "settings": {
-                                        "text": "<p>Happy Customers</p>",
-                                        "width": "fit-content",
-                                        "max_width": "normal",
-                                        "alignment": "left",
-                                        "type_preset": "custom",
-                                        "font": "var(--font-body--family)",
-                                        "font_size": "1.25rem",
-                                        "line_height": "tight",
-                                        "letter_spacing": "tight",
-                                        "case": "none",
-                                        "wrap": "pretty",
-                                        "color": "var(--color-foreground)",
-                                        "background": false,
-                                        "background_color": "#00000026",
-                                        "corner_radius": 0,
-                                        "padding-block-start": 0,
-                                        "padding-block-end": 0,
-                                        "padding-inline-start": 0,
-                                        "padding-inline-end": 0,
-                                        "use_custom_typography": false,
-                                        "custom_font_family": "Inter",
-                                        "custom_font_size": 16,
-                                        "custom_font_weight": "400",
-                                        "custom_font_color": "#000000",
-                                        "custom_letter_spacing": 0,
-                                        "custom_word_spacing": 0
+                                        "text_content": "Happy Customers",
+                                        "text_alignment": "left",
+                                        "text_color": "#000000",
+                                        "font_family": "instrument_sans_n4",
+                                        "mobile_font_size": 16,
+                                        "mobile_font_weight": 100,
+                                        "mobile_letter_spacing": 0,
+                                        "mobile_word_spacing": -1,
+                                        "desktop_font_size": 16,
+                                        "desktop_font_weight": 400,
+                                        "desktop_letter_spacing": 0,
+                                        "desktop_word_spacing": 0
                                       },
                                       "blocks": {}
                                     }
                                   },
                                   "block_order": [
                                     "text_Qnwiy6",
-                                    "text_wEtLEz"
+                                    "ai_gen_block_63ff7af_F8kDG8"
                                   ]
                                 }
                               },
@@ -1579,7 +1515,7 @@
                               "name": "t:names.group",
                               "settings": {
                                 "content_direction": "row",
-                                "vertical_on_mobile": true,
+                                "vertical_on_mobile": false,
                                 "horizontal_alignment": "flex-start",
                                 "vertical_alignment": "center",
                                 "align_baseline": false,
@@ -1588,7 +1524,7 @@
                                 "gap": 12,
                                 "width": "fit-content",
                                 "custom_width": 100,
-                                "width_mobile": "fit-content",
+                                "width_mobile": "fill",
                                 "custom_width_mobile": 100,
                                 "height": "fit",
                                 "custom_height": 100,
@@ -1699,43 +1635,28 @@
                                       },
                                       "blocks": {}
                                     },
-                                    "text_7Nhw7J": {
-                                      "type": "text",
-                                      "name": "t:names.text",
+                                    "ai_gen_block_63ff7af_XXXdeH": {
+                                      "type": "ai_gen_block_63ff7af",
                                       "settings": {
-                                        "text": "<p>Distributors</p>",
-                                        "width": "fit-content",
-                                        "max_width": "normal",
-                                        "alignment": "left",
-                                        "type_preset": "custom",
-                                        "font": "var(--font-body--family)",
-                                        "font_size": "1.25rem",
-                                        "line_height": "tight",
-                                        "letter_spacing": "tight",
-                                        "case": "none",
-                                        "wrap": "pretty",
-                                        "color": "var(--color-foreground)",
-                                        "background": false,
-                                        "background_color": "#00000026",
-                                        "corner_radius": 0,
-                                        "padding-block-start": 0,
-                                        "padding-block-end": 0,
-                                        "padding-inline-start": 0,
-                                        "padding-inline-end": 0,
-                                        "use_custom_typography": false,
-                                        "custom_font_family": "Inter",
-                                        "custom_font_size": 16,
-                                        "custom_font_weight": "400",
-                                        "custom_font_color": "#000000",
-                                        "custom_letter_spacing": 0,
-                                        "custom_word_spacing": 0
+                                        "text_content": "Distributors",
+                                        "text_alignment": "left",
+                                        "text_color": "#000000",
+                                        "font_family": "instrument_sans_n4",
+                                        "mobile_font_size": 16,
+                                        "mobile_font_weight": 100,
+                                        "mobile_letter_spacing": 0,
+                                        "mobile_word_spacing": -1,
+                                        "desktop_font_size": 16,
+                                        "desktop_font_weight": 400,
+                                        "desktop_letter_spacing": 0,
+                                        "desktop_word_spacing": 0
                                       },
                                       "blocks": {}
                                     }
                                   },
                                   "block_order": [
                                     "text_i3NHGC",
-                                    "text_7Nhw7J"
+                                    "ai_gen_block_63ff7af_XXXdeH"
                                   ]
                                 }
                               },
@@ -1749,7 +1670,7 @@
                               "name": "t:names.group",
                               "settings": {
                                 "content_direction": "row",
-                                "vertical_on_mobile": true,
+                                "vertical_on_mobile": false,
                                 "horizontal_alignment": "flex-start",
                                 "vertical_alignment": "center",
                                 "align_baseline": false,
@@ -1758,7 +1679,7 @@
                                 "gap": 12,
                                 "width": "fit-content",
                                 "custom_width": 100,
-                                "width_mobile": "fit-content",
+                                "width_mobile": "fill",
                                 "custom_width_mobile": 100,
                                 "height": "fit",
                                 "custom_height": 100,
@@ -1869,43 +1790,28 @@
                                       },
                                       "blocks": {}
                                     },
-                                    "text_JtQCaF": {
-                                      "type": "text",
-                                      "name": "t:names.text",
+                                    "ai_gen_block_63ff7af_tPBYpT": {
+                                      "type": "ai_gen_block_63ff7af",
                                       "settings": {
-                                        "text": "<p>States Presence</p>",
-                                        "width": "fit-content",
-                                        "max_width": "normal",
-                                        "alignment": "left",
-                                        "type_preset": "custom",
-                                        "font": "var(--font-body--family)",
-                                        "font_size": "1.25rem",
-                                        "line_height": "tight",
-                                        "letter_spacing": "tight",
-                                        "case": "none",
-                                        "wrap": "pretty",
-                                        "color": "var(--color-foreground)",
-                                        "background": false,
-                                        "background_color": "#00000026",
-                                        "corner_radius": 0,
-                                        "padding-block-start": 0,
-                                        "padding-block-end": 0,
-                                        "padding-inline-start": 0,
-                                        "padding-inline-end": 0,
-                                        "use_custom_typography": false,
-                                        "custom_font_family": "Inter",
-                                        "custom_font_size": 16,
-                                        "custom_font_weight": "400",
-                                        "custom_font_color": "#000000",
-                                        "custom_letter_spacing": 0,
-                                        "custom_word_spacing": 0
+                                        "text_content": "States Presence",
+                                        "text_alignment": "left",
+                                        "text_color": "#000000",
+                                        "font_family": "instrument_sans_n4",
+                                        "mobile_font_size": 16,
+                                        "mobile_font_weight": 100,
+                                        "mobile_letter_spacing": 0,
+                                        "mobile_word_spacing": -1,
+                                        "desktop_font_size": 16,
+                                        "desktop_font_weight": 400,
+                                        "desktop_letter_spacing": 0,
+                                        "desktop_word_spacing": 0
                                       },
                                       "blocks": {}
                                     }
                                   },
                                   "block_order": [
                                     "text_P3bPzg",
-                                    "text_JtQCaF"
+                                    "ai_gen_block_63ff7af_tPBYpT"
                                   ]
                                 }
                               },
@@ -1958,7 +1864,6 @@
               },
               "block_order": [
                 "ai_gen_block_63ff7af_khtr3G",
-                "text_RTjg3A",
                 "group_LAMtnn"
               ]
             }
@@ -2466,77 +2371,49 @@
                     "text_Ly6n8y"
                   ]
                 },
-                "text_8LKCFd": {
-                  "type": "text",
-                  "name": "t:names.text",
+                "ai_gen_block_63ff7af_kTY7yX": {
+                  "type": "ai_gen_block_63ff7af",
+                  "name": "Responsive text",
                   "settings": {
-                    "text": "<h2>Track soil moisture to support healthier plant growth.</h2>",
-                    "width": "fit-content",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "custom",
-                    "font": "var(--font-heading--family)",
-                    "font_size": "2.5rem",
-                    "line_height": "tight",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "color": "var(--color-foreground)",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0,
-                    "use_custom_typography": true,
-                    "custom_font_family": "instrument sans",
-                    "custom_font_size": 44,
-                    "custom_font_weight": "400",
-                    "custom_font_color": "#000000",
-                    "custom_letter_spacing": 0,
-                    "custom_word_spacing": 0
+                    "text_content": "Track soil moisture to support healthier plant growth.",
+                    "text_alignment": "left",
+                    "text_color": "#000000",
+                    "font_family": "instrument_sans_n4",
+                    "mobile_font_size": 22,
+                    "mobile_font_weight": 400,
+                    "mobile_letter_spacing": 0,
+                    "mobile_word_spacing": 0,
+                    "desktop_font_size": 44,
+                    "desktop_font_weight": 400,
+                    "desktop_letter_spacing": 0,
+                    "desktop_word_spacing": 0
                   },
                   "blocks": {}
                 },
-                "text_Nx3A6C": {
-                  "type": "text",
-                  "name": "t:names.text",
+                "ai_gen_block_63ff7af_DDGmc6": {
+                  "type": "ai_gen_block_63ff7af",
+                  "name": "Responsive text",
                   "settings": {
-                    "text": "<p>From small farms to large-scale operations, our solutions help you grow faster, improve productivity, and achieve better healthier plant growth.</p>",
-                    "width": "fit-content",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "custom",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "color": "var(--color-foreground)",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0,
-                    "use_custom_typography": true,
-                    "custom_font_family": "instrument sans",
-                    "custom_font_size": 16,
-                    "custom_font_weight": "400",
-                    "custom_font_color": "#000000",
-                    "custom_letter_spacing": 0,
-                    "custom_word_spacing": 0
+                    "text_content": "From small farms to large-scale operations, our solutions help you grow faster, improve productivity, and achieve better healthier plant growth.",
+                    "text_alignment": "left",
+                    "text_color": "#000000",
+                    "font_family": "instrument_sans_n4",
+                    "mobile_font_size": 16,
+                    "mobile_font_weight": 100,
+                    "mobile_letter_spacing": 0,
+                    "mobile_word_spacing": 0,
+                    "desktop_font_size": 16,
+                    "desktop_font_weight": 400,
+                    "desktop_letter_spacing": 0,
+                    "desktop_word_spacing": 0
                   },
                   "blocks": {}
                 }
               },
               "block_order": [
                 "group_U7KJhK",
-                "text_8LKCFd",
-                "text_Nx3A6C"
+                "ai_gen_block_63ff7af_kTY7yX",
+                "ai_gen_block_63ff7af_DDGmc6"
               ]
             },
             "image_W8fyRN": {
@@ -2772,36 +2649,6 @@
         "padding-block-start": 80,
         "padding-block-end": 60
       }
-    },
-    "17854007383766fdc3": {
-      "type": "_blocks",
-      "settings": {
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 12,
-        "section_width": "page-width",
-        "section_height": "",
-        "section_height_custom": 50,
-        "color_scheme": "",
-        "background_media": "none",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_radius": 0,
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "padding-block-start": 0,
-        "padding-block-end": 0
-      }
     }
   },
   "order": [
@@ -2809,7 +2656,6 @@
     "section_i4Xxya",
     "collection_list_Hnwe9L",
     "section_D98tzr",
-    "section_adBx3G",
-    "17854007383766fdc3"
+    "section_adBx3G"
   ]
 }
