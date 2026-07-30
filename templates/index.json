@@ -708,7 +708,7 @@
                     "alignment": "left",
                     "type_preset": "custom",
                     "font": "var(--font-body--family)",
-                    "font_size": "1.125rem",
+                    "font_size": "1.25rem",
                     "line_height": "tight",
                     "letter_spacing": "tight",
                     "case": "none",
@@ -721,13 +721,13 @@
                     "padding-block-end": 0,
                     "padding-inline-start": 0,
                     "padding-inline-end": 0,
-                    "use_custom_typography": false,
-                    "custom_font_family": "Inter",
-                    "custom_font_size": 16,
+                    "use_custom_typography": true,
+                    "custom_font_family": "Instrument sans",
+                    "custom_font_size": 20,
                     "custom_font_weight": "400",
                     "custom_font_color": "#000000",
                     "custom_letter_spacing": 0,
-                    "custom_word_spacing": 0
+                    "custom_word_spacing": -1
                   },
                   "blocks": {}
                 }
@@ -2100,13 +2100,13 @@
                     "padding-block-end": 0,
                     "padding-inline-start": 0,
                     "padding-inline-end": 0,
-                    "use_custom_typography": false,
-                    "custom_font_family": "Inter",
-                    "custom_font_size": 16,
+                    "use_custom_typography": true,
+                    "custom_font_family": "instument sans",
+                    "custom_font_size": 20,
                     "custom_font_weight": "400",
                     "custom_font_color": "#000000",
                     "custom_letter_spacing": 0,
-                    "custom_word_spacing": 0
+                    "custom_word_spacing": -1
                   },
                   "blocks": {}
                 }
