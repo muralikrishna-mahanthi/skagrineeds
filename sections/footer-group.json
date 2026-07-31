@@ -60,7 +60,7 @@
               "settings": {
                 "text_content": "Let's Grow Something Revolutionary.",
                 "text_alignment": "center",
-                "text_color": "#FFFFFF",
+                "text_color": "#ffffff",
                 "font_family": "instrument_sans_n4",
                 "mobile_font_size": 30,
                 "mobile_font_weight": 400,
@@ -190,7 +190,7 @@
                   "settings": {
                     "text_content": "CALL US",
                     "text_alignment": "left",
-                    "text_color": "#FFFFFF",
+                    "text_color": "#ffffff",
                     "font_family": "instrument_sans_n4",
                     "mobile_font_size": 18,
                     "mobile_font_weight": 400,
@@ -207,9 +207,9 @@
                   "type": "ai_gen_block_63ff7af",
                   "name": "Responsive text",
                   "settings": {
-                    "text_content": "Your text here",
+                    "text_content": "+91 9000232386",
                     "text_alignment": "left",
-                    "text_color": "#FFFFFF",
+                    "text_color": "#ffffff",
                     "font_family": "instrument_sans_n4",
                     "mobile_font_size": 16,
                     "mobile_font_weight": 100,
@@ -274,7 +274,7 @@
                   "settings": {
                     "text_content": "EMAIL US",
                     "text_alignment": "left",
-                    "text_color": "#FFFFFF",
+                    "text_color": "#ffffff",
                     "font_family": "instrument_sans_n4",
                     "mobile_font_size": 18,
                     "mobile_font_weight": 400,
@@ -293,7 +293,7 @@
                   "settings": {
                     "text_content": "supportskagrineeds@gmail.com",
                     "text_alignment": "left",
-                    "text_color": "#FFFFFF",
+                    "text_color": "#ffffff",
                     "font_family": "instrument_sans_n4",
                     "mobile_font_size": 16,
                     "mobile_font_weight": 400,
@@ -358,7 +358,7 @@
                   "settings": {
                     "text_content": "WORKING HOURS",
                     "text_alignment": "left",
-                    "text_color": "#FFFFFF",
+                    "text_color": "#ffffff",
                     "font_family": "instrument_sans_n4",
                     "mobile_font_size": 18,
                     "mobile_font_weight": 400,
@@ -377,7 +377,7 @@
                   "settings": {
                     "text_content": "Mon – Sat: 9:00am – 6:00pm IST",
                     "text_alignment": "left",
-                    "text_color": "#FFFFFF",
+                    "text_color": "#ffffff",
                     "font_family": "instrument_sans_n4",
                     "mobile_font_size": 16,
                     "mobile_font_weight": 400,
@@ -442,7 +442,7 @@
                   "settings": {
                     "text_content": "LOCATION",
                     "text_alignment": "left",
-                    "text_color": "#FFFFFF",
+                    "text_color": "#ffffff",
                     "font_family": "instrument_sans_n4",
                     "mobile_font_size": 18,
                     "mobile_font_weight": 400,
@@ -459,9 +459,9 @@
                   "type": "ai_gen_block_63ff7af",
                   "name": "Responsive text",
                   "settings": {
-                    "text_content": "Your text here",
+                    "text_content": "Plot no 136, 2nd floor Opposite HDFC Bank, HIG PHASE IV, Gateway colony, Vanasthalipuram, 500070",
                     "text_alignment": "left",
-                    "text_color": "#FFFFFF",
+                    "text_color": "#ffffff",
                     "font_family": "instrument_sans_n4",
                     "mobile_font_size": 16,
                     "mobile_font_weight": 400,
@@ -671,7 +671,7 @@
             "font_family": "Instrument sans",
             "font_size_desktop": 68,
             "font_size_mobile": 32,
-            "font_color": "#FFFFFF",
+            "font_color": "#ffffff",
             "font_opacity": 100,
             "background_image": "shopify://shop_images/69c33fa6274fd993581ba554_Soil_Image_compressed-p-2000.webp",
             "speed": 70,
