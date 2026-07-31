@@ -663,29 +663,42 @@
     "17854117867c406733": {
       "type": "_blocks",
       "blocks": {
-        "ai_gen_block_e6e8024_nUaVqx": {
-          "type": "ai_gen_block_e6e8024",
+        "text_eqwLJc": {
+          "type": "text",
+          "name": "t:names.text",
           "settings": {
-            "text": "SK AGRI NEEDS .",
-            "direction": "left",
-            "font_family": "Instrument sans",
-            "font_size_desktop": 68,
-            "font_size_mobile": 32,
-            "font_color": "#ffffff",
-            "font_opacity": 100,
-            "background_image": "shopify://shop_images/69c33fa6274fd993581ba554_Soil_Image_compressed-p-2000.webp",
-            "speed": 70,
-            "text_gap": 30,
-            "margin_top_desktop": 20,
-            "margin_bottom_desktop": 20,
-            "margin_top_mobile": 15,
-            "margin_bottom_mobile": 15
+            "text": "<p>SK AGRI NEEDS</p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "custom",
+            "font": "var(--font-heading--family)",
+            "font_size": "3rem",
+            "line_height": "tight",
+            "letter_spacing": "tight",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0,
+            "use_custom_typography": true,
+            "custom_font_family": "Instruments sans",
+            "custom_font_size": 46,
+            "custom_font_weight": "900",
+            "custom_font_color": "#D2E798",
+            "custom_letter_spacing": -1,
+            "custom_word_spacing": 0
           },
           "blocks": {}
         }
       },
       "block_order": [
-        "ai_gen_block_e6e8024_nUaVqx"
+        "text_eqwLJc"
       ],
       "settings": {
         "content_direction": "column",
@@ -693,9 +706,9 @@
         "horizontal_alignment": "flex-start",
         "vertical_alignment": "center",
         "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
+        "horizontal_alignment_flex_direction_column": "center",
         "vertical_alignment_flex_direction_column": "center",
-        "gap": 12,
+        "gap": 0,
         "section_width": "full-width",
         "section_height": "",
         "section_height_custom": 50,
